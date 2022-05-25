@@ -1,0 +1,1979 @@
+{
+    "version": 1.1,
+    "properties": [
+        {
+            "name": "alternate-background-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The [alternate background color](https://doc.qt.io/qt-5/qabstractitemview.html#alternatingRowColors-prop) used in [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses.\n\nIf this property is not set, the default value is whatever is set for the palette's [AlternateBase](https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum) role.\n\n\nExample:\n\n```\nQTreeView {\n    alternate-background-color: blue;\n    background: yellow;\n}\n```\n\nSee also [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop) and [selection-background-color](https://doc.qt.io/qt-5/stylesheet-reference.html#selection-background-color-prop).\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "background",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the background. Equivalent to specifying background-color, background-image, background-repeat, and/or background-position.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QDialog](https://doc.qt.io/qt-5/qdialog.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolTip](https://doc.qt.io/qt-5/qtooltip.html), and plain [QWidget](https://doc.qt.io/qt-5/qwidget.html)s.\n\n\nExample:\n\n```\nQTextEdit { background: yellow }\n```\n\nOften, it is required to set a fill pattern similar to the styles in [Qt::BrushStyle](https://doc.qt.io/qt-5/qt.html#BrushStyle-enum). You can use the background-color property for [Qt::SolidPattern](https://doc.qt.io/qt-5/qt.html#BrushStyle-enum), [Qt::RadialGradientPattern](https://doc.qt.io/qt-5/qt.html#BrushStyle-enum), [Qt::LinearGradientPattern](https://doc.qt.io/qt-5/qt.html#BrushStyle-enum) and [Qt::ConicalGradientPattern](https://doc.qt.io/qt-5/qt.html#BrushStyle-enum). The other patterns are easily achieved by creating a background image that contains the pattern.\n\n\nExample:\n\n```\nQLabel {\n    background-image: url(dense6pattern.png);\n    background-repeat: repeat-xy;\n}\n```\n\nSee also [background-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#background-origin-prop), [selection-background-color](https://doc.qt.io/qt-5/stylesheet-reference.html#selection-background-color-prop), [background-clip](https://doc.qt.io/qt-5/stylesheet-reference.html#background-clip-prop), [background-attachment](https://doc.qt.io/qt-5/stylesheet-reference.html#background-attachment-prop) and [alternate-background-color](https://doc.qt.io/qt-5/stylesheet-reference.html#alternate-background-color-prop).\n\n`Background`:\nA sequence of [Brush](https://doc.qt.io/qt-5/stylesheet-reference.html#brush), [Url](https://doc.qt.io/qt-5/stylesheet-reference.html#url), [Repeat](https://doc.qt.io/qt-5/stylesheet-reference.html#repeat), and [Alignment](https://doc.qt.io/qt-5/stylesheet-reference.html#alignment)."
+            },
+            "references": [
+                {
+                    "name": "Background",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#background"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Brush\n| Url\n| Repeat\n| Alignment }*"
+        },
+        {
+            "name": "background-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The background color used for the widget.\n\nExamples:\n\n```\nQLabel { background-color: yellow }\nQLineEdit { background-color: rgb(255, 0, 0) }\n```\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "background-image",
+            "description": {
+                "kind": "markdown",
+                "value": "The background image used for the widget. Semi-transparent parts of the image let the background-color shine through.\n\nExample:\n\n```\nQFrame { background-image: url(:/images/hydro.png) }\n```\n\n`Url`:\nfilename is the name of a file on the local disk or stored using [The Qt Resource System](https://doc.qt.io/qt-5/resources.html). Setting an image implicitly sets the width and height of the element."
+            },
+            "references": [
+                {
+                    "name": "Url",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#url"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "url(filename)"
+        },
+        {
+            "name": "background-repeat",
+            "description": {
+                "kind": "markdown",
+                "value": "Whether and how the background image is repeated to fill the background-origin rectangle.\n\nIf this property is not specified, the background image is repeated in both directions (repeat).\n\n\nExample:\n\n```\nQFrame {\n    background: white url(:/images/ring.png);\n    background-repeat: repeat-y;\n    background-position: left;\n}\n```\n\n`Repeat`:\nA value indicating the nature of repetition.\n\n\n\nrepeat-x: Repeat horizontally.\n\n\nrepeat-y: Repeat vertically.\n\n\nrepeat: Repeat horizontally and vertically.\n\n\nno-repeat: Don't repeat."
+            },
+            "references": [
+                {
+                    "name": "Repeat",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#repeat"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "repeat-x\n| repeat-y\n| repeat\n| no-repeat"
+        },
+        {
+            "name": "background-position",
+            "description": {
+                "kind": "markdown",
+                "value": "The alignment of the background image within the background-origin rectangle.\n\nIf this property is not specified, the alignment is top left.\n\n\nExample:\n\n```\nQFrame {\n    background: url(:/images/footer.png);\n    background-position: bottom left;\n}\n```\n\n`Alignment`:\nHorizontal and/or vertical alignment.\n\nExample:\n\n```\nQTextEdit { background-position: bottom center }\n```"
+            },
+            "references": [
+                {
+                    "name": "Alignment",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#alignment"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ top\n| bottom\n| left\n| right\n| center }*"
+        },
+        {
+            "name": "background-attachment",
+            "description": {
+                "kind": "markdown",
+                "value": "Determines whether the background-image in a [QAbstractScrollArea](https://doc.qt.io/qt-5/qabstractscrollarea.html) is scrolled or fixed with respect to the viewport. By default, the background-image scrolls with the viewport.\n\nExample:\n\n```\nQTextEdit {\n    background-image: url(\"leaves.png\");\n    background-attachment: fixed;\n}\n```\n\nSee also [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop)\n\n`Attachment`:\nScroll or fixed attachment."
+            },
+            "references": [
+                {
+                    "name": "Attachment",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#attachment"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ scroll\n| fixed }*"
+        },
+        {
+            "name": "background-clip",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's rectangle, in which the background is drawn.\n\nThis property specifies the rectangle to which the background-color and background-image are clipped.\n\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QDialog](https://doc.qt.io/qt-5/qdialog.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolTip](https://doc.qt.io/qt-5/qtooltip.html), and plain [QWidget](https://doc.qt.io/qt-5/qwidget.html)s.\n\n\nIf this property is not specified, the default is border.\n\n\nExample:\n\n```\nQFrame {\n    background-image: url(:/images/header.png);\n    background-position: top left;\n    background-origin: content;\n    background-clip: padding;\n}\n```\n\nSee also [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop), [background-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#background-origin-prop) and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Origin`:\nIndicates which of four rectangles to use.\n\n\n\nmargin: The margin rectangle. The margin falls outside the border.\n\n\nborder: The border rectangle. This is where any border is drawn.\n\n\npadding: The padding rectangle. Unlike the margins, padding is located inside the border.\n\n\ncontent: The content rectangle. This specifies where the actual contents go, excluding any padding, border, or margin.\n\n\n\n\nSee also [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model)."
+            },
+            "references": [
+                {
+                    "name": "Origin",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#origin"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "margin\n| border\n| padding\n| content"
+        },
+        {
+            "name": "background-origin",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's background rectangle, to use in conjunction with background-position and background-image.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QDialog](https://doc.qt.io/qt-5/qdialog.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolTip](https://doc.qt.io/qt-5/qtooltip.html), and plain [QWidget](https://doc.qt.io/qt-5/qwidget.html)s.\n\n\nIf this property is not specified, the default is padding.\n\n\nExample:\n\n```\nQFrame {\n    background-image: url(:/images/header.png);\n    background-position: top left;\n    background-origin: content;\n}\n```\n\nSee also [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop) and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Origin`:\nIndicates which of four rectangles to use.\n\n\n\nmargin: The margin rectangle. The margin falls outside the border.\n\n\nborder: The border rectangle. This is where any border is drawn.\n\n\npadding: The padding rectangle. Unlike the margins, padding is located inside the border.\n\n\ncontent: The content rectangle. This specifies where the actual contents go, excluding any padding, border, or margin.\n\n\n\n\nSee also [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model)."
+            },
+            "references": [
+                {
+                    "name": "Origin",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#origin"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "margin\n| border\n| padding\n| content"
+        },
+        {
+            "name": "border",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the widget's border. Equivalent to specifying border-color, border-style, and/or border-width.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolTip](https://doc.qt.io/qt-5/qtooltip.html), and plain [QWidget](https://doc.qt.io/qt-5/qwidget.html)s.\n\n\nExample:\n\n```\nQLineEdit { border: 1px solid white }\n```\n\n`Border`:\nShorthand border property."
+            },
+            "references": [
+                {
+                    "name": "Border",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Border Style\n| Length\n| Brush }*"
+        },
+        {
+            "name": "border-top",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the widget's top border. Equivalent to specifying border-top-color, border-top-style, and/or border-top-width.\n\n`Border`:\nShorthand border property."
+            },
+            "references": [
+                {
+                    "name": "Border",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Border Style\n| Length\n| Brush }*"
+        },
+        {
+            "name": "border-right",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the widget's right border. Equivalent to specifying border-right-color, border-right-style, and/or border-right-width.\n\n`Border`:\nShorthand border property."
+            },
+            "references": [
+                {
+                    "name": "Border",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Border Style\n| Length\n| Brush }*"
+        },
+        {
+            "name": "border-bottom",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the widget's bottom border. Equivalent to specifying border-bottom-color, border-bottom-style, and/or border-bottom-width.\n\n`Border`:\nShorthand border property."
+            },
+            "references": [
+                {
+                    "name": "Border",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Border Style\n| Length\n| Brush }*"
+        },
+        {
+            "name": "border-left",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the widget's left border. Equivalent to specifying border-left-color, border-left-style, and/or border-left-width.\n\n`Border`:\nShorthand border property."
+            },
+            "references": [
+                {
+                    "name": "Border",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ Border Style\n| Length\n| Brush }*"
+        },
+        {
+            "name": "border-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of all the border's edges. Equivalent to specifying border-top-color, border-right-color, border-bottom-color, and border-left-color.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolTip](https://doc.qt.io/qt-5/qtooltip.html), and plain [QWidget](https://doc.qt.io/qt-5/qwidget.html)s.\n\n\nIf this property is not specified, it defaults to [color](https://doc.qt.io/qt-5/stylesheet-reference.html#color-prop) (i.e., the widget's foreground color).\n\n\nExample:\n\n```\nQLineEdit {\n    border-width: 1px;\n    border-style: solid;\n    border-color: white;\n}\n```\n\nSee also [border-style](https://doc.qt.io/qt-5/stylesheet-reference.html#border-style-prop), [border-width](https://doc.qt.io/qt-5/stylesheet-reference.html#border-width-prop), [border-image](https://doc.qt.io/qt-5/stylesheet-reference.html#border-image-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Box Colors`:\nOne to four occurrences of [Brush](https://doc.qt.io/qt-5/stylesheet-reference.html#brush), specifying the top, right, bottom, and left edges of a box, respectively. If the left color is not specified, it is taken to be the same as the right color. If the bottom color is not specified, it is taken to be the same as the top color. If the right color is not specified, it is taken to be the same as the top color.\n\nExample:\n\n```\nQLabel { border-color: red }   /* red red red red */\nQLabel { border-color: red blue } /* red blue red blue */\nQLabel { border-color: red blue green } /* red blue green blue */\nQLabel { border-color: red blue green yellow }\n/* red blue green yellow */\n```"
+            },
+            "references": [
+                {
+                    "name": "Box Colors",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#box-colors"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Brush{1,4}"
+        },
+        {
+            "name": "border-top-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the border's top edge.\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "border-right-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the border's right edge.\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "border-bottom-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the border's bottom edge.\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "border-left-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the border's left edge.\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "border-image",
+            "description": {
+                "kind": "markdown",
+                "value": "The image used to fill the border. The image is cut into nine parts and stretched appropriately if necessary. See [Border Image](https://doc.qt.io/qt-5/stylesheet-reference.html#border-image) for details.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html) and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nSee also [border-color](https://doc.qt.io/qt-5/stylesheet-reference.html#border-color-prop), [border-style](https://doc.qt.io/qt-5/stylesheet-reference.html#border-style-prop), [border-width](https://doc.qt.io/qt-5/stylesheet-reference.html#border-width-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Border Image`:\nA border image is an image that is composed of nine parts (top left, top center, top right, center left, center, center right, bottom left, bottom center, and bottom right). When a border of a certain size is required, the corner parts are used as is, and the top, right, bottom, and left parts are stretched or repeated to produce a border with the desired size.\n\nSee the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#the-border-image) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Image",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-image"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "none\n| Url Number{4}\n(stretch | repeat){0,2}"
+        },
+        {
+            "name": "border-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius of the border's corners. Equivalent to specifying border-top-left-radius, border-top-right-radius, border-bottom-right-radius, and border-bottom-left-radius.\n\nThe border-radius clips the element's [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop).\n\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, it defaults to 0.\n\n\nExample:\n\n```\nQLineEdit {\n    border-width: 1px;\n    border-style: solid;\n    border-radius: 4px;\n}\n```\n\nSee also [border-width](https://doc.qt.io/qt-5/stylesheet-reference.html#border-width-prop) and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "border-top-left-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius of the border's top-left corner.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "border-top-right-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius of the border's top-right corner.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "border-bottom-right-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius of the border's bottom-right corner. Setting this property to a positive value results in a rounded corner.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "border-bottom-left-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius of the border's bottom-left corner. Setting this property to a positive value results in a rounded corner.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "border-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The style of all the border's edges.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, it defaults to none.\n\n\nExample:\n\n```\nQLineEdit {\n    border-width: 1px;\n    border-style: solid;\n    border-color: blue;\n}\n```\n\nSee also [border-color](https://doc.qt.io/qt-5/stylesheet-reference.html#border-color-prop), [border-style](https://doc.qt.io/qt-5/stylesheet-reference.html#border-style-prop), [border-image](https://doc.qt.io/qt-5/stylesheet-reference.html#border-image-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Border Style`:\nSpecifies the pattern used to draw a border. See the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#border-style) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "dashed\n| dot-dash\n| dot-dot-dash\n| dotted\n| double\n| groove\n| inset\n| outset\n| ridge\n| solid\n| none"
+        },
+        {
+            "name": "border-top-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The style of the border's top edge.\n\n`Border Style`:\nSpecifies the pattern used to draw a border. See the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#border-style) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "dashed\n| dot-dash\n| dot-dot-dash\n| dotted\n| double\n| groove\n| inset\n| outset\n| ridge\n| solid\n| none"
+        },
+        {
+            "name": "border-right-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The style of the border's right edge/\n\n`Border Style`:\nSpecifies the pattern used to draw a border. See the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#border-style) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "dashed\n| dot-dash\n| dot-dot-dash\n| dotted\n| double\n| groove\n| inset\n| outset\n| ridge\n| solid\n| none"
+        },
+        {
+            "name": "border-bottom-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The style of the border's bottom edge.\n\n`Border Style`:\nSpecifies the pattern used to draw a border. See the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#border-style) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "dashed\n| dot-dash\n| dot-dot-dash\n| dotted\n| double\n| groove\n| inset\n| outset\n| ridge\n| solid\n| none"
+        },
+        {
+            "name": "border-left-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The style of the border's left edge.\n\n`Border Style`:\nSpecifies the pattern used to draw a border. See the [CSS3 Draft Specification](http://www.w3.org/TR/css3-background/#border-style) for details."
+            },
+            "references": [
+                {
+                    "name": "Border Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#border-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "dashed\n| dot-dash\n| dot-dot-dash\n| dotted\n| double\n| groove\n| inset\n| outset\n| ridge\n| solid\n| none"
+        },
+        {
+            "name": "border-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of the border. Equivalent to setting border-top-width, border-right-width, border-bottom-width, and border-left-width.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nExample:\n\n```\nQLineEdit {\n    border-width: 2px;\n    border-style: solid;\n    border-color: darkblue;\n}\n```\n\nSee also [border-color](https://doc.qt.io/qt-5/stylesheet-reference.html#border-color-prop), [border-radius](https://doc.qt.io/qt-5/stylesheet-reference.html#border-radius-prop), [border-style](https://doc.qt.io/qt-5/stylesheet-reference.html#border-style-prop), [border-image](https://doc.qt.io/qt-5/stylesheet-reference.html#border-image-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Box Lengths`:\nOne to four occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length), specifying the top, right, bottom, and left edges of a box, respectively. If the left length is not specified, it is taken to be the same as the right length. If the bottom length is not specified, is it taken to be the same as the top length. If the right length is not specified, it is taken to be the same as the top length.\n\nExamples:\n\n```\nQLabel { border-width: 1px }                    /* 1px 1px 1px 1px */\nQLabel { border-width: 1px 2px }                /* 1px 2px 1px 2px */\nQLabel { border-width: 1px 2px 3px }            /* 1px 2px 3px 2px */\nQLabel { border-width: 1px 2px 3px 4px }        /* 1px 2px 3px 4px */\n```"
+            },
+            "references": [
+                {
+                    "name": "Box Lengths",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#box-lengths"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1,4}"
+        },
+        {
+            "name": "border-top-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of the border's top edge.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "border-right-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of the border's right edge.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "border-bottom-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of the border's bottom edge.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "border-left-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of the border's left edge.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "bottom",
+            "description": {
+                "kind": "markdown",
+                "value": "If [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is relative (the default), moves a subcontrol by a certain offset up; specifying bottom: y is then equivalent to specifying [top](https://doc.qt.io/qt-5/stylesheet-reference.html#top-prop): -y.\n\nIf [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is absolute, the bottom property specifies the subcontrol's bottom edge in relation to the parent's bottom edge (see also [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop)).\n\n\nExample:\n\n```\nQSpinBox::down-button { bottom: 2px }\n```\n\nSee also [left](https://doc.qt.io/qt-5/stylesheet-reference.html#left-prop), [right](https://doc.qt.io/qt-5/stylesheet-reference.html#right-prop), and [top](https://doc.qt.io/qt-5/stylesheet-reference.html#top-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "button-layout",
+            "description": {
+                "kind": "markdown",
+                "value": "The layout of buttons in a [QDialogButtonBox](https://doc.qt.io/qt-5/qdialogbuttonbox.html) or a [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html). The possible values are 0 ([WinLayout](https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum)), 1 ([MacLayout](https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum)), 2 ([KdeLayout](https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum)), 3 ([GnomeLayout](https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum)) and 5 ([AndroidLayout](https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum)).\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_DialogButtonLayout](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\n* { button-layout: 2 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color used to render text.\n\nThis property is supported by all widgets that respect the [QWidget::palette](https://doc.qt.io/qt-5/qwidget.html#palette-prop).\n\n\nIf this property is not set, the default is whatever is set for in the widget's palette for the [QWidget::foregroundRole](https://doc.qt.io/qt-5/qwidget.html#foregroundRole) (typically black).\n\n\nExample:\n\n```\nQPushButton { color: red }\n```\n\nSee also [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop) and [selection-color](https://doc.qt.io/qt-5/stylesheet-reference.html#selection-color-prop).\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "dialogbuttonbox-buttons-have-icons",
+            "description": {
+                "kind": "markdown",
+                "value": "Whether the buttons in a [QDialogButtonBox](https://doc.qt.io/qt-5/qdialogbuttonbox.html) show icons\n\nIf this property is set to 1, the buttons of a [QDialogButtonBox](https://doc.qt.io/qt-5/qdialogbuttonbox.html) show icons; if it is set to 0, the icons are not shown.\n\n\nSee the [List of Icons](https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-icons) section for information on how to set icons.\n\n```\nQDialogButtonBox { dialogbuttonbox-buttons-have-icons: 1; }\n```\n\n\n\nNote: Styles defining this property must be applied before the [QDialogButtonBox](https://doc.qt.io/qt-5/qdialogbuttonbox.html) is created; this means that you must apply the style to the parent widget or to the application itself.\n\n`Boolean`:\nTrue (1) or false (0).\n\nExample:\n\n```\nQDialog { etch-disabled-text: 1 }\n```"
+            },
+            "references": [
+                {
+                    "name": "Boolean",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#boolean"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "0 | 1"
+        },
+        {
+            "name": "font",
+            "description": {
+                "kind": "markdown",
+                "value": "Shorthand notation for setting the text's font. Equivalent to specifying font-family, font-size, font-style, and/or font-weight.\n\nThis property is supported by all widgets that respect the [QWidget::font](https://doc.qt.io/qt-5/qwidget.html#font-prop).\n\n\nIf this property is not set, the default is the [QWidget::font](https://doc.qt.io/qt-5/qwidget.html#font-prop).\n\n\nExample:\n\n```\nQCheckBox { font: bold italic large \"Times New Roman\" }\n```\n\n`Font`:\nShorthand font property."
+            },
+            "references": [
+                {
+                    "name": "Font",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#font"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "(Font Style | Font Weight){0,2} Font Size String"
+        },
+        {
+            "name": "font-family",
+            "description": {
+                "kind": "markdown",
+                "value": "The font family.\n\nExample:\n\n```\nQCheckBox { font-family: \"New Century Schoolbook\" }\n```"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "font-size",
+            "description": {
+                "kind": "markdown",
+                "value": "The font size. In this version of Qt, only pt and px metrics are supported.\n\nExample:\n\n```\nQTextEdit { font-size: 12px }\n```\n\n`Font Size`:\nThe size of a font."
+            },
+            "references": [
+                {
+                    "name": "Font Size",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#font-size"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length"
+        },
+        {
+            "name": "font-style",
+            "description": {
+                "kind": "markdown",
+                "value": "The font style.\n\nExample:\n\n```\nQTextEdit { font-style: italic }\n```\n\n`Font Style`:\nThe style of a font."
+            },
+            "references": [
+                {
+                    "name": "Font Style",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#font-style"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "normal\n| italic\n| oblique"
+        },
+        {
+            "name": "font-weight",
+            "description": {
+                "kind": "markdown",
+                "value": "The weight of the font.\n\n`Font Weight`:\nThe weight of a font."
+            },
+            "references": [
+                {
+                    "name": "Font Weight",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#font-weight"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "normal\n| bold\n| 100\n| 200\n...\n| 900"
+        },
+        {
+            "name": "gridline-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the grid line in a [QTableView](https://doc.qt.io/qt-5/qtableview.html).\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_Table_GridLineColor](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\n* { gridline-color: gray }\n```\n\n`Color`:\nSpecifies a color as RGB (red, green, blue), RGBA (red, green, blue, alpha), HSV (hue, saturation, value), HSVA (hue, saturation, value, alpha), HSL (hue, saturation, lightness), HSLA (hue, saturation, lightness, alpha) or a named color. The rgb() or rgba() syntax can be used with integer values between 0 and 255, or with percentages. The value of s, v, l and a in hsv(), hsva() hsl() or hsla() must all be in the range 0-255 or with percentages, the value of h must be in the range 0-359. The support for HSL(A) is available since 5.13.\n\nExamples:\n\n```\nQLabel { border-color: red }                      /* opaque red */\nQLabel { border-color: #FF0000 }                  /* opaque red */\nQLabel { border-color: rgba(255, 0, 0, 75%) }     /* 75% opaque red */\nQLabel { border-color: rgb(255, 0, 0) }           /* opaque red */\nQLabel { border-color: rgb(100%, 0%, 0%) }        /* opaque red */\nQLabel { border-color: hsv(60, 100%, 100%) }      /* opaque yellow */\nQLabel { border-color: hsva(240, 255, 255, 75%) } /* 75% blue */\nQLabel { border-color: hsl(60, 100%, 50%) }       /* opaque yellow */\nQLabel { border-color: hsla(240, 255, 50%, 75%) } /* 75% blue */\n```\n\n\n\nNote: The RGB colors allowed are the same as those allowed with CSS 2.1, as listed [here](http://www.w3.org/TR/CSS21/syndata.html#color-units)."
+            },
+            "references": [
+                {
+                    "name": "Color",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#color"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "rgb(r, g, b)\n| rgba(r, g, b, a)\n| hsv(h, s, v)\n| hsva(h, s, v, a)\n| hsl(h, s, l)\n| hsla(h, s, l, a)\n| #rrggbb\n| Color Name"
+        },
+        {
+            "name": "height",
+            "description": {
+                "kind": "markdown",
+                "value": "The height of a subcontrol (or in some case, a widget).\n\nIf this property is not specified, it defaults to a value that depends on the subcontrol/widget and on the current style.\n\n\n\n\nWarning: Unless otherwise specified, this property has no effect when set on widgets. If you want a widget with a fixed height, set the [min-height](https://doc.qt.io/qt-5/stylesheet-reference.html#min-width-prop) and [max-height](https://doc.qt.io/qt-5/stylesheet-reference.html#max-width-prop) to the same value.\n\n\n\n\nExample:\n\n```\nQSpinBox::down-button { height: 10px }\n```\n\nSee also [width](https://doc.qt.io/qt-5/stylesheet-reference.html#width-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "icon",
+            "description": {
+                "kind": "markdown",
+                "value": "The icon that is used, for widgets that have an icon.\n\nThe only widget currently supporting this property is [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html).\n\n\n\n\nNote: It's the application's responsibilty to assign an icon to a button (using the [QAbstractButton](https://doc.qt.io/qt-5/qabstractbutton.html) API), and not the style's. So be careful setting it unless your stylesheet is targeting a specific application.\n\n\n\n\nAvailable since 5.15."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "icon-size",
+            "description": {
+                "kind": "markdown",
+                "value": "The width and height of the icon in a widget.\n\nThe icon size of the following widgets can be set using this property.\n\n\n\n\n[QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html)\n\n\n[QListView](https://doc.qt.io/qt-5/qlistview.html)\n\n\n[QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)\n\n\n[QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html)\n\n\n[QTabBar](https://doc.qt.io/qt-5/qtabbar.html)\n\n\n[QToolBar](https://doc.qt.io/qt-5/qtoolbar.html)\n\n\n[QToolBox](https://doc.qt.io/qt-5/qtoolbox.html)\n\n\n[QTreeView](https://doc.qt.io/qt-5/qtreeview.html)\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "image",
+            "description": {
+                "kind": "markdown",
+                "value": "The image that is drawn in the contents rectangle of a subcontrol.\n\nThe image property accepts a list of [Url](https://doc.qt.io/qt-5/stylesheet-reference.html#url)s or an svg. The actual image that is drawn is determined using the same algorithm as [QIcon](https://doc.qt.io/qt-5/qicon.html) (i.e) the image is never scaled up but always scaled down if necessary. If a svg is specified, the image is scaled to the size of the contents rectangle.\n\n\nSetting the image property on sub controls implicitly sets the width and height of the sub-control (unless the image in a SVG).\n\n\nIn Qt 4.3 and later, the alignment of the image within the rectangle can be specified using [image-position](https://doc.qt.io/qt-5/stylesheet-reference.html#image-position-prop).\n\n\nThis property is for subcontrols only--we don't support it for other elements.\n\n\n\n\nWarning: The [QIcon](https://doc.qt.io/qt-5/qicon.html) SVG plugin is needed to render SVG images.\n\n\n\n\nExample:\n\n```\n// implicitly sets the size of down-button to the\n// size of spindown.png\nQSpinBox::down-button { image: url(:/images/spindown.png) }\n```"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "image-position",
+            "description": {
+                "kind": "markdown",
+                "value": "In Qt 4.3 and later, the alignment of the image image's position can be specified using relative or absolute position."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "left",
+            "description": {
+                "kind": "markdown",
+                "value": "If [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is relative (the default), moves a subcontrol by a certain offset to the right.\n\nIf [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is absolute, the left property specifies the subcontrol's left edge in relation to the parent's left edge (see also [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop)).\n\n\nIf this property is not specified, it defaults to 0.\n\n\nExample:\n\n```\nQSpinBox::down-button { left: 2px }\n```\n\nSee also [right](https://doc.qt.io/qt-5/stylesheet-reference.html#right-prop), [top](https://doc.qt.io/qt-5/stylesheet-reference.html#top-prop), and [bottom](https://doc.qt.io/qt-5/stylesheet-reference.html#bottom-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "lineedit-password-character",
+            "description": {
+                "kind": "markdown",
+                "value": "The [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html) password character as a Unicode number.\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_LineEdit_PasswordCharacter](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\n* { lineedit-password-character: 9679 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "lineedit-password-mask-delay",
+            "description": {
+                "kind": "markdown",
+                "value": "The [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html) password mask delay in milliseconds before [lineedit-password-character](https://doc.qt.io/qt-5/stylesheet-reference.html#lineedit-password-character-prop) is applied to visible character.\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_LineEdit_PasswordMaskDelay](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nThis property was added in Qt 5.4.\n\n\nExample:\n\n```\n* { lineedit-password-mask-delay: 1000 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "margin",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's margins. Equivalent to specifying margin-top, margin-right, margin-bottom, and margin-left.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, it defaults to 0.\n\n\nExample:\n\n```\nQLineEdit { margin: 2px }\n```\n\nSee also [padding](https://doc.qt.io/qt-5/stylesheet-reference.html#padding-prop), [spacing](https://doc.qt.io/qt-5/stylesheet-reference.html#spacing-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Box Lengths`:\nOne to four occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length), specifying the top, right, bottom, and left edges of a box, respectively. If the left length is not specified, it is taken to be the same as the right length. If the bottom length is not specified, is it taken to be the same as the top length. If the right length is not specified, it is taken to be the same as the top length.\n\nExamples:\n\n```\nQLabel { border-width: 1px }                    /* 1px 1px 1px 1px */\nQLabel { border-width: 1px 2px }                /* 1px 2px 1px 2px */\nQLabel { border-width: 1px 2px 3px }            /* 1px 2px 3px 2px */\nQLabel { border-width: 1px 2px 3px 4px }        /* 1px 2px 3px 4px */\n```"
+            },
+            "references": [
+                {
+                    "name": "Box Lengths",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#box-lengths"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1,4}"
+        },
+        {
+            "name": "margin-top",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's top margin.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "margin-right",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's right margin.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "margin-bottom",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's bottom margin.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "margin-left",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's left margin.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "max-height",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's or a subcontrol's maximum height.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSizeGrip](https://doc.qt.io/qt-5/qsizegrip.html), [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QStatusBar](https://doc.qt.io/qt-5/qstatusbar.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nThe value is relative to the contents rect in the [box model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n\nExample:\n\n```\nQSpinBox { max-height: 24px }\n```\n\nSee also [max-width](https://doc.qt.io/qt-5/stylesheet-reference.html#max-width-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "max-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's or a subcontrol's maximum width.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSizeGrip](https://doc.qt.io/qt-5/qsizegrip.html), [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QStatusBar](https://doc.qt.io/qt-5/qstatusbar.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nThe value is relative to the contents rect in the [box model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n\nExample:\n\n```\nQComboBox { max-width: 72px }\n```\n\nSee also [max-height](https://doc.qt.io/qt-5/stylesheet-reference.html#max-height-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "messagebox-text-interaction-flags",
+            "description": {
+                "kind": "markdown",
+                "value": "The interaction behavior for text in a message box. Possible values are based on [Qt::TextInteractionFlags](https://doc.qt.io/qt-5/qt.html#TextInteractionFlag-enum).\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_MessageBox_TextInteractionFlags](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\nQMessageBox { messagebox-text-interaction-flags: 5 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "min-height",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's or a subcontrol's minimum height.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSizeGrip](https://doc.qt.io/qt-5/qsizegrip.html), [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QStatusBar](https://doc.qt.io/qt-5/qstatusbar.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, the minimum height is derived based on the widget's contents and the style.\n\n\nThe value is relative to the contents rect in the [box model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n\nExample:\n\n```\nQComboBox { min-height: 24px }\n```\n\n\n\nNote: Setting this property might allow widgets to shrink smaller than the space required for the contents.\n\n\n\n\nSee also [min-width](https://doc.qt.io/qt-5/stylesheet-reference.html#min-width-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "min-width",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's or a subcontrol's minimum width.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSizeGrip](https://doc.qt.io/qt-5/qsizegrip.html), [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QStatusBar](https://doc.qt.io/qt-5/qstatusbar.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, the minimum width is derived based on the widget's contents and the style.\n\n\nThe value is relative to the contents rect in the [box model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n\nExample:\n\n```\nQComboBox { min-width: 72px }\n```\n\n\n\nNote: Setting this property might allow widgets to shrink smaller than the space required for the contents.\n\n\n\n\nSee also [min-height](https://doc.qt.io/qt-5/stylesheet-reference.html#min-height-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "opacity",
+            "description": {
+                "kind": "markdown",
+                "value": "The opacity for a widget. Possible values are from 0 (transparent) to 255 (opaque). For the moment, this is only supported for [tooltips](https://doc.qt.io/qt-5/qtooltip.html).\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_ToolTipLabel_Opacity](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\nQToolTip { opacity: 223 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "outline",
+            "description": {
+                "kind": "markdown",
+                "value": "The outline drawn around the object's border."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "outline-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The color of the outline. See also [border-color](https://doc.qt.io/qt-5/stylesheet-reference.html#border-color-prop)\n\n`Color`:\nSpecifies a color as RGB (red, green, blue), RGBA (red, green, blue, alpha), HSV (hue, saturation, value), HSVA (hue, saturation, value, alpha), HSL (hue, saturation, lightness), HSLA (hue, saturation, lightness, alpha) or a named color. The rgb() or rgba() syntax can be used with integer values between 0 and 255, or with percentages. The value of s, v, l and a in hsv(), hsva() hsl() or hsla() must all be in the range 0-255 or with percentages, the value of h must be in the range 0-359. The support for HSL(A) is available since 5.13.\n\nExamples:\n\n```\nQLabel { border-color: red }                      /* opaque red */\nQLabel { border-color: #FF0000 }                  /* opaque red */\nQLabel { border-color: rgba(255, 0, 0, 75%) }     /* 75% opaque red */\nQLabel { border-color: rgb(255, 0, 0) }           /* opaque red */\nQLabel { border-color: rgb(100%, 0%, 0%) }        /* opaque red */\nQLabel { border-color: hsv(60, 100%, 100%) }      /* opaque yellow */\nQLabel { border-color: hsva(240, 255, 255, 75%) } /* 75% blue */\nQLabel { border-color: hsl(60, 100%, 50%) }       /* opaque yellow */\nQLabel { border-color: hsla(240, 255, 50%, 75%) } /* 75% blue */\n```\n\n\n\nNote: The RGB colors allowed are the same as those allowed with CSS 2.1, as listed [here](http://www.w3.org/TR/CSS21/syndata.html#color-units)."
+            },
+            "references": [
+                {
+                    "name": "Color",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#color"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "rgb(r, g, b)\n| rgba(r, g, b, a)\n| hsv(h, s, v)\n| hsva(h, s, v, a)\n| hsl(h, s, l)\n| hsla(h, s, l, a)\n| #rrggbb\n| Color Name"
+        },
+        {
+            "name": "outline-offset",
+            "description": {
+                "kind": "markdown",
+                "value": "The outline's offset from the border of the widget.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "outline-style",
+            "description": {
+                "kind": "markdown",
+                "value": "Specifies the pattern used to draw the outline. See also [border-style](https://doc.qt.io/qt-5/stylesheet-reference.html#border-style-prop)"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "outline-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "Adds rounded corners to the outline"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "outline-bottom-left-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius for the bottom-left rounded corner of the outline.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "outline-bottom-right-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius for the bottom-right rounded corner of the outline.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "outline-top-left-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius for the top-left corner of the outline.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "outline-top-right-radius",
+            "description": {
+                "kind": "markdown",
+                "value": "The radius for the top-right rounded corner of the outline.\n\n`Radius`:\nOne or two occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length). If only one length is specified, it is used as the radius of the quarter circle defining the corner. If two lengths are specified, the first length is the horizontal radius of a quarter ellipse, whereas the second length is the vertical radius."
+            },
+            "references": [
+                {
+                    "name": "Radius",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#radius"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1, 2}"
+        },
+        {
+            "name": "padding",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's padding. Equivalent to specifying padding-top, padding-right, padding-bottom, and padding-left.\n\nThis property is supported by [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) subclasses, [QAbstractSpinBox](https://doc.qt.io/qt-5/qabstractspinbox.html) subclasses, [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QFrame](https://doc.qt.io/qt-5/qframe.html), [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html), [QLabel](https://doc.qt.io/qt-5/qlabel.html), [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html), [QMenu](https://doc.qt.io/qt-5/qmenu.html), [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html), [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), [QTextEdit](https://doc.qt.io/qt-5/qtextedit.html), and [QToolTip](https://doc.qt.io/qt-5/qtooltip.html).\n\n\nIf this property is not specified, it defaults to 0.\n\n\nExample:\n\n```\nQLineEdit { padding: 3px }\n```\n\nSee also [margin](https://doc.qt.io/qt-5/stylesheet-reference.html#margin-prop), [spacing](https://doc.qt.io/qt-5/stylesheet-reference.html#spacing-prop), and [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model).\n\n`Box Lengths`:\nOne to four occurrences of [Length](https://doc.qt.io/qt-5/stylesheet-reference.html#length), specifying the top, right, bottom, and left edges of a box, respectively. If the left length is not specified, it is taken to be the same as the right length. If the bottom length is not specified, is it taken to be the same as the top length. If the right length is not specified, it is taken to be the same as the top length.\n\nExamples:\n\n```\nQLabel { border-width: 1px }                    /* 1px 1px 1px 1px */\nQLabel { border-width: 1px 2px }                /* 1px 2px 1px 2px */\nQLabel { border-width: 1px 2px 3px }            /* 1px 2px 3px 2px */\nQLabel { border-width: 1px 2px 3px 4px }        /* 1px 2px 3px 4px */\n```"
+            },
+            "references": [
+                {
+                    "name": "Box Lengths",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#box-lengths"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Length{1,4}"
+        },
+        {
+            "name": "padding-top",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's top padding.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "padding-right",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's right padding.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "padding-bottom",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's bottom padding.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "padding-left",
+            "description": {
+                "kind": "markdown",
+                "value": "The widget's left padding.\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "paint-alternating-row-colors-for-empty-area",
+            "description": {
+                "kind": "markdown",
+                "value": "Whether the [QTreeView](https://doc.qt.io/qt-5/qtreeview.html) paints alternating row colors for the empty area (i.e the area where there are no items)"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "position",
+            "description": {
+                "kind": "markdown",
+                "value": "Whether offsets specified using [left](https://doc.qt.io/qt-5/stylesheet-reference.html#left-prop), [right](https://doc.qt.io/qt-5/stylesheet-reference.html#right-prop), [top](https://doc.qt.io/qt-5/stylesheet-reference.html#top-prop), and [bottom](https://doc.qt.io/qt-5/stylesheet-reference.html#bottom-prop) are relative or absolute coordinates.\n\nIf this property is not specified, it defaults to relative."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "right",
+            "description": {
+                "kind": "markdown",
+                "value": "If [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is relative (the default), moves a subcontrol by a certain offset to the left; specifying right: x is then equivalent to specifying [left](https://doc.qt.io/qt-5/stylesheet-reference.html#left-prop): -x.\n\nIf [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is absolute, the right property specifies the subcontrol's right edge in relation to the parent's right edge (see also [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop)).\n\n\nExample:\n\n```\nQSpinBox::down-button { right: 2px }\n```\n\nSee also [left](https://doc.qt.io/qt-5/stylesheet-reference.html#left-prop), [top](https://doc.qt.io/qt-5/stylesheet-reference.html#top-prop), and [bottom](https://doc.qt.io/qt-5/stylesheet-reference.html#bottom-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "selection-background-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The background of selected text or items.\n\nThis property is supported by all widgets that respect the [QWidget::palette](https://doc.qt.io/qt-5/qwidget.html#palette-prop) and that show selection text.\n\n\nIf this property is not set, the default value is whatever is set for the palette's [Highlight](https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum) role.\n\n\nExample:\n\n```\nQTextEdit { selection-background-color: darkblue }\n```\n\nSee also [selection-color](https://doc.qt.io/qt-5/stylesheet-reference.html#selection-color-prop) and [background](https://doc.qt.io/qt-5/stylesheet-reference.html#background-prop).\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "selection-color",
+            "description": {
+                "kind": "markdown",
+                "value": "The foreground of selected text or items.\n\nThis property is supported by all widgets that respect the [QWidget::palette](https://doc.qt.io/qt-5/qwidget.html#palette-prop) and that show selection text.\n\n\nIf this property is not set, the default value is whatever is set for the palette's [HighlightedText](https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum) role.\n\n\nExample:\n\n```\nQTextEdit { selection-color: white }\n```\n\nSee also [selection-background-color](https://doc.qt.io/qt-5/stylesheet-reference.html#selection-background-color-prop) and [color](https://doc.qt.io/qt-5/stylesheet-reference.html#color-prop).\n\n`Brush`:\nSpecifies a Color or a Gradient or an entry in the Palette."
+            },
+            "references": [
+                {
+                    "name": "Brush",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#brush"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Color\n| Gradient\n| PaletteRole"
+        },
+        {
+            "name": "show-decoration-selected",
+            "description": {
+                "kind": "markdown",
+                "value": "Controls whether selections in a [QListView](https://doc.qt.io/qt-5/qlistview.html) cover the entire row or just the extent of the text.\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_ItemView_ShowDecorationSelected](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nExample:\n\n```\n* { show-decoration-selected: 1 }\n```\n\n`Boolean`:\nTrue (1) or false (0).\n\nExample:\n\n```\nQDialog { etch-disabled-text: 1 }\n```"
+            },
+            "references": [
+                {
+                    "name": "Boolean",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#boolean"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "0 | 1"
+        },
+        {
+            "name": "spacing",
+            "description": {
+                "kind": "markdown",
+                "value": "Internal spacing in the widget.\n\nThis property is supported by [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), checkable [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html)es, [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), and [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html).\n\n\nIf this property is not specified, the default value depends on the widget and on the current style.\n\n\nExample:\n\n```\nQMenuBar { spacing: 10 }\n```\n\nSee also [padding](https://doc.qt.io/qt-5/stylesheet-reference.html#padding-prop) and [margin](https://doc.qt.io/qt-5/stylesheet-reference.html#margin-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "subcontrol-origin",
+            "description": {
+                "kind": "markdown",
+                "value": "The origin rectangle of the subcontrol within the parent element.\n\nIf this property is not specified, the default is padding.\n\n\nExample:\n\n```\nQSpinBox::up-button {\n    image: url(:/images/spinup.png);\n    subcontrol-origin: content;\n    subcontrol-position: right top;\n}\n```\n\nSee also [subcontrol-position](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-position-prop).\n\n`Origin`:\nIndicates which of four rectangles to use.\n\n\n\nmargin: The margin rectangle. The margin falls outside the border.\n\n\nborder: The border rectangle. This is where any border is drawn.\n\n\npadding: The padding rectangle. Unlike the margins, padding is located inside the border.\n\n\ncontent: The content rectangle. This specifies where the actual contents go, excluding any padding, border, or margin.\n\n\n\n\nSee also [The Box Model](https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model)."
+            },
+            "references": [
+                {
+                    "name": "Origin",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#origin"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "margin\n| border\n| padding\n| content"
+        },
+        {
+            "name": "subcontrol-position",
+            "description": {
+                "kind": "markdown",
+                "value": "The alignment of the subcontrol within the origin rectangle specified by [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop).\n\nIf this property is not specified, it defaults to a value that depends on the subcontrol.\n\n\nExample:\n\n```\nQSpinBox::down-button {\n    image: url(:/images/spindown.png);\n    subcontrol-origin: padding;\n    subcontrol-position: right bottom;\n}\n```\n\nSee also [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop).\n\n`Alignment`:\nHorizontal and/or vertical alignment.\n\nExample:\n\n```\nQTextEdit { background-position: bottom center }\n```"
+            },
+            "references": [
+                {
+                    "name": "Alignment",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#alignment"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ top\n| bottom\n| left\n| right\n| center }*"
+        },
+        {
+            "name": "titlebar-show-tooltips-on-buttons}",
+            "description": {
+                "kind": "markdown",
+                "value": "Whether tool tips are shown on window title bar buttons."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "widget-animation-duration",
+            "description": {
+                "kind": "markdown",
+                "value": "How much an animation should last (in milliseconds). A value equal to zero means that the animations will be disabled.\n\nIf this property is not specified, it defaults to the value specified by the current style for the [SH_Widget_Animation_Duration](https://doc.qt.io/qt-5/qstyle.html#StyleHint-enum) style hint.\n\n\nThis property was added in Qt 5.10.\n\n\nExample:\n\n```\n* { widget-animation-duration: 100 }\n```\n\n`Number`:\nExamples: 0, 18, +127, -255, 12.34, -.5, 0009."
+            },
+            "references": [
+                {
+                    "name": "Number",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#number"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "A decimal integer or a real number"
+        },
+        {
+            "name": "text-align",
+            "description": {
+                "kind": "markdown",
+                "value": "The alignment of text and icon within the contents of the widget.\n\nIf this value is not specified, it defaults to the value that depends on the native style.\n\n\nExample:\n\n```\nQPushButton {\n    text-align: left;\n}\n```\n\nThis property is currently supported only by [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html) and [QProgressBar](https://doc.qt.io/qt-5/qprogressbar.html).\n\n`Alignment`:\nHorizontal and/or vertical alignment.\n\nExample:\n\n```\nQTextEdit { background-position: bottom center }\n```"
+            },
+            "references": [
+                {
+                    "name": "Alignment",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#alignment"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "{ top\n| bottom\n| left\n| right\n| center }*"
+        },
+        {
+            "name": "text-decoration",
+            "description": {
+                "kind": "markdown",
+                "value": "Additional text effects"
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        },
+        {
+            "name": "top",
+            "description": {
+                "kind": "markdown",
+                "value": "If [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is relative (the default), moves a subcontrol by a certain offset down.\n\nIf [position](https://doc.qt.io/qt-5/stylesheet-reference.html#position-prop) is absolute, the top property specifies the subcontrol's top edge in relation to the parent's top edge (see also [subcontrol-origin](https://doc.qt.io/qt-5/stylesheet-reference.html#subcontrol-origin-prop)).\n\n\nIf this property is not specified, it defaults to 0.\n\n\nExample:\n\n```\nQSpinBox::up-button { top: 2px }\n```\n\nSee also [left](https://doc.qt.io/qt-5/stylesheet-reference.html#left-prop), [right](https://doc.qt.io/qt-5/stylesheet-reference.html#right-prop), and [bottom](https://doc.qt.io/qt-5/stylesheet-reference.html#bottom-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "width",
+            "description": {
+                "kind": "markdown",
+                "value": "The width of a subcontrol (or a widget in some cases).\n\nIf this property is not specified, it defaults to a value that depends on the subcontrol/widget and on the current style.\n\n\n\n\nWarning: Unless otherwise specified, this property has no effect when set on widgets. If you want a widget with a fixed width, set the [min-width](https://doc.qt.io/qt-5/stylesheet-reference.html#min-width-prop) and [max-width](https://doc.qt.io/qt-5/stylesheet-reference.html#max-width-prop) to the same value.\n\n\n\n\nExample:\n\n```\nQSpinBox::up-button { width: 12px }\n```\n\nSee also [height](https://doc.qt.io/qt-5/stylesheet-reference.html#height-prop).\n\n`Length`:\nA number followed by a measurement unit. The CSS standard recommends that user agents must [ignore](http://www.w3.org/TR/CSS21/syndata.html#illegalvalues) a declaration with an illegal value. In Qt, it is mandatory to specify measurement units. For compatibility with earlier versions of Qt, numbers without measurement units are treated as pixels in most contexts. The supported units are:\n\n\n\npx: pixels\n\n\npt: the size of one point (i.e., 1/72 of an inch)\n\n\nem: the em width of the font (i.e., the width of 'M')\n\n\nex: the x-height of the font (i.e., the height of 'x')\n\n\n\n\nHowever, Qt is limited to font sizes in pt and px and any other size must be in px, em or ex."
+            },
+            "references": [
+                {
+                    "name": "Length",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#length"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "Number (px | pt | em | ex)?"
+        },
+        {
+            "name": "-qt-background-role",
+            "description": {
+                "kind": "markdown",
+                "value": "The background-color for the subcontrol or widget based on the chosen role.\n\n`PaletteRole`:\nThese values correspond the [Color roles](https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum) in the widget's [QPalette](https://doc.qt.io/qt-5/qpalette.html).\n\nFor example,\n\n```\nQPushButton { color: palette(dark); }\n```"
+            },
+            "references": [
+                {
+                    "name": "PaletteRole",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#paletterole"
+                },
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ],
+            "syntax": "alternate-base\n| base\n| bright-text\n| button\n| button-text\n| dark\n| highlight\n| highlighted-text\n| light\n| link\n| link-visited\n| mid\n| midlight\n| shadow\n| text\n| window\n| window-text"
+        },
+        {
+            "name": "-qt-style-features",
+            "description": {
+                "kind": "markdown",
+                "value": "The list of CSS properties that you want to apply Qt-specific styles on.\n\n\n\nNote: The list can only include properties that are not pixmap-based."
+            },
+            "references": [
+                {
+                    "name": "list-of-properties",
+                    "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
+                }
+            ]
+        }
+    ],
+    "pseudoClasses": [
+        {
+            "name": ":active",
+            "description": "This state is set when the widget resides in an active window."
+        },
+        {
+            "name": ":adjoins-item",
+            "description": "This state is set when the [::branch](https://doc.qt.io/qt-5/stylesheet-reference.html#branch-sub) of a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html) is adjacent to an item."
+        },
+        {
+            "name": ":alternate",
+            "description": "This state is set for every alternate row whe painting the row of a [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) when [QAbstractItemView::alternatingRowColors](https://doc.qt.io/qt-5/qabstractitemview.html#alternatingRowColors-prop)() is set to true."
+        },
+        {
+            "name": ":bottom",
+            "description": "The item is positioned at the bottom. For example, a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) that has its tabs positioned at the bottom."
+        },
+        {
+            "name": ":checked",
+            "description": "The item is checked. For example, the [checked](https://doc.qt.io/qt-5/qabstractbutton.html#checked-prop) state of [QAbstractButton](https://doc.qt.io/qt-5/qabstractbutton.html)."
+        },
+        {
+            "name": ":closable",
+            "description": "The items can be closed. For example, the [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html) has the [QDockWidget::DockWidgetClosable](https://doc.qt.io/qt-5/qdockwidget.html#DockWidgetFeature-enum) feature turned on."
+        },
+        {
+            "name": ":closed",
+            "description": "The item is in the closed state. For example, an non-expanded item in a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html)"
+        },
+        {
+            "name": ":default",
+            "description": "The item is the default. For example, a [default](https://doc.qt.io/qt-5/qpushbutton.html#default-prop) [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html) or a default action in a [QMenu](https://doc.qt.io/qt-5/qmenu.html)."
+        },
+        {
+            "name": ":disabled",
+            "description": "The item is [disabled](https://doc.qt.io/qt-5/qwidget.html#enabled-prop)."
+        },
+        {
+            "name": ":editable",
+            "description": "The [QComboBox](https://doc.qt.io/qt-5/qcombobox.html) is editable."
+        },
+        {
+            "name": ":edit-focus",
+            "description": "The item has edit focus (See [QStyle::State_HasEditFocus](https://doc.qt.io/qt-5/qstyle.html#StateFlag-enum)). This state is available only for Qt Extended applications."
+        },
+        {
+            "name": ":enabled",
+            "description": "The item is [enabled](https://doc.qt.io/qt-5/qwidget.html#enabled-prop)."
+        },
+        {
+            "name": ":exclusive",
+            "description": "The item is part of an exclusive item group. For example, a menu item in a exclusive [QActionGroup](https://doc.qt.io/qt-5/qactiongroup.html)."
+        },
+        {
+            "name": ":first",
+            "description": "The item is the first (in a list). For example, the first tab in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": ":flat",
+            "description": "The item is flat. For example, a [flat](https://doc.qt.io/qt-5/qpushbutton.html#flat-prop) [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)."
+        },
+        {
+            "name": ":floatable",
+            "description": "The items can be floated. For example, the [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html) has the [QDockWidget::DockWidgetFloatable](https://doc.qt.io/qt-5/qdockwidget.html#DockWidgetFeature-enum) feature turned on."
+        },
+        {
+            "name": ":focus",
+            "description": "The item has [input focus](https://doc.qt.io/qt-5/qwidget.html#focus-prop)."
+        },
+        {
+            "name": ":has-children",
+            "description": "The item has children. For example, an item in a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html) that has child items."
+        },
+        {
+            "name": ":has-siblings",
+            "description": "The item has siblings. For example, an item in a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html) that siblings."
+        },
+        {
+            "name": ":horizontal",
+            "description": "The item has horizontal orientation"
+        },
+        {
+            "name": ":hover",
+            "description": "The mouse is hovering over the item."
+        },
+        {
+            "name": ":indeterminate",
+            "description": "The item has indeterminate state. For example, a [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html) or [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html) is [partially checked](https://doc.qt.io/qt-5/qt.html#CheckState-enum)."
+        },
+        {
+            "name": ":last",
+            "description": "The item is the last (in a list). For example, the last tab in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": ":left",
+            "description": "The item is positioned at the left. For example, a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) that has its tabs positioned at the left."
+        },
+        {
+            "name": ":maximized",
+            "description": "The item is maximized. For example, a maximized [QMdiSubWindow](https://doc.qt.io/qt-5/qmdisubwindow.html)."
+        },
+        {
+            "name": ":middle",
+            "description": "The item is in the middle (in a list). For example, a tab that is not in the beginning or the end in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": ":minimized",
+            "description": "The item is minimized. For example, a minimized [QMdiSubWindow](https://doc.qt.io/qt-5/qmdisubwindow.html)."
+        },
+        {
+            "name": ":movable",
+            "description": "The item can be moved around. For example, the [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html) has the [QDockWidget::DockWidgetMovable](https://doc.qt.io/qt-5/qdockwidget.html#DockWidgetFeature-enum) feature turned on."
+        },
+        {
+            "name": ":no-frame",
+            "description": "The item has no frame. For example, a frameless [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html) or [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html)."
+        },
+        {
+            "name": ":non-exclusive",
+            "description": "The item is part of a non-exclusive item group. For example, a menu item in a non-exclusive [QActionGroup](https://doc.qt.io/qt-5/qactiongroup.html)."
+        },
+        {
+            "name": ":off",
+            "description": "For items that can be toggled, this applies to items in the \"off\" state."
+        },
+        {
+            "name": ":on",
+            "description": "For items that can be toggled, this applies to widgets in the \"on\" state."
+        },
+        {
+            "name": ":only-one",
+            "description": "The item is the only one (in a list). For example, a lone tab in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": ":open",
+            "description": "The item is in the open state. For example, an expanded item in a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html), or a [QComboBox](https://doc.qt.io/qt-5/qcombobox.html) or [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html) with an open menu."
+        },
+        {
+            "name": ":next-selected",
+            "description": "The next item (in a list) is selected. For example, the selected tab of a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) is next to this item."
+        },
+        {
+            "name": ":pressed",
+            "description": "The item is being pressed using the mouse."
+        },
+        {
+            "name": ":previous-selected",
+            "description": "The previous item (in a list) is selected. For example, a tab in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) that is next to the selected tab."
+        },
+        {
+            "name": ":read-only",
+            "description": "The item is marked read only or non-editable. For example, a read only [QLineEdit](https://doc.qt.io/qt-5/qlineedit.html) or a non-editable [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)."
+        },
+        {
+            "name": ":right",
+            "description": "The item is positioned at the right. For example, a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) that has its tabs positioned at the right."
+        },
+        {
+            "name": ":selected",
+            "description": "The item is selected. For example, the selected tab in a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) or the selected item in a [QMenu](https://doc.qt.io/qt-5/qmenu.html)."
+        },
+        {
+            "name": ":top",
+            "description": "The item is positioned at the top. For example, a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) that has its tabs positioned at the top."
+        },
+        {
+            "name": ":unchecked",
+            "description": "The item is [unchecked](https://doc.qt.io/qt-5/qabstractbutton.html#checked-prop)."
+        },
+        {
+            "name": ":vertical",
+            "description": "The item has vertical orientation."
+        },
+        {
+            "name": ":window",
+            "description": "The widget is a window (i.e top level widget)"
+        }
+    ],
+    "pseudoElements": [
+        {
+            "name": "::add-line",
+            "description": "The button to add a line of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::add-page",
+            "description": "The region between the handle (slider) and the [add-line](https://doc.qt.io/qt-5/stylesheet-reference.html#add-line-sub) of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::branch",
+            "description": "The branch indicator of a [QTreeView](https://doc.qt.io/qt-5/qtreeview.html)."
+        },
+        {
+            "name": "::chunk",
+            "description": "The progress chunk of a [QProgressBar](https://doc.qt.io/qt-5/qprogressbar.html)."
+        },
+        {
+            "name": "::close-button",
+            "description": "The close button of a [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html) or tabs of [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)"
+        },
+        {
+            "name": "::corner",
+            "description": "The corner between two scrollbars in a [QAbstractScrollArea](https://doc.qt.io/qt-5/qabstractscrollarea.html)"
+        },
+        {
+            "name": "::down-arrow",
+            "description": "The down arrow of a [QComboBox](https://doc.qt.io/qt-5/qcombobox.html), [QHeaderView](https://doc.qt.io/qt-5/qheaderview.html) (sort indicator), [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html) or [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)."
+        },
+        {
+            "name": "::down-button",
+            "description": "The down button of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html) or a [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)."
+        },
+        {
+            "name": "::drop-down",
+            "description": "The drop-down button of a [QComboBox](https://doc.qt.io/qt-5/qcombobox.html)."
+        },
+        {
+            "name": "::float-button",
+            "description": "The float button of a [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html)"
+        },
+        {
+            "name": "::groove",
+            "description": "The groove of a [QSlider](https://doc.qt.io/qt-5/qslider.html)."
+        },
+        {
+            "name": "::indicator",
+            "description": "The indicator of a [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html), a [QCheckBox](https://doc.qt.io/qt-5/qcheckbox.html), a [QRadioButton](https://doc.qt.io/qt-5/qradiobutton.html), a checkable [QMenu](https://doc.qt.io/qt-5/qmenu.html) item or a checkable [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html)."
+        },
+        {
+            "name": "::handle",
+            "description": "The handle (slider) of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html), a [QSplitter](https://doc.qt.io/qt-5/qsplitter.html), or a [QSlider](https://doc.qt.io/qt-5/qslider.html)."
+        },
+        {
+            "name": "::icon",
+            "description": "The icon of a [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html) or a [QMenu](https://doc.qt.io/qt-5/qmenu.html)."
+        },
+        {
+            "name": "::item",
+            "description": "An item of a [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html), a [QMenuBar](https://doc.qt.io/qt-5/qmenubar.html), a [QMenu](https://doc.qt.io/qt-5/qmenu.html), or a [QStatusBar](https://doc.qt.io/qt-5/qstatusbar.html)."
+        },
+        {
+            "name": "::left-arrow",
+            "description": "The left arrow of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::left-corner",
+            "description": "The left corner of a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html). For example, this control can be used to control position the left corner widget in a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html)."
+        },
+        {
+            "name": "::menu-arrow",
+            "description": "The arrow of a [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html) with a menu."
+        },
+        {
+            "name": "::menu-button",
+            "description": "The menu button of a [QToolButton](https://doc.qt.io/qt-5/qtoolbutton.html)."
+        },
+        {
+            "name": "::menu-indicator",
+            "description": "The menu indicator of a [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html)."
+        },
+        {
+            "name": "::right-arrow",
+            "description": "The right arrow of a [QMenu](https://doc.qt.io/qt-5/qmenu.html) or a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::pane",
+            "description": "The pane (frame) of a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html)."
+        },
+        {
+            "name": "::right-corner",
+            "description": "The right corner of a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html). For example, this control can be used to control the position the right corner widget in a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html)."
+        },
+        {
+            "name": "::scroller",
+            "description": "The scroller of a [QMenu](https://doc.qt.io/qt-5/qmenu.html) or [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": "::section",
+            "description": "The section of a [QHeaderView](https://doc.qt.io/qt-5/qheaderview.html)."
+        },
+        {
+            "name": "::separator",
+            "description": "The separator of a [QMenu](https://doc.qt.io/qt-5/qmenu.html) or in a [QMainWindow](https://doc.qt.io/qt-5/qmainwindow.html)."
+        },
+        {
+            "name": "::sub-line",
+            "description": "The button to subtract a line of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::sub-page",
+            "description": "The region between the handle (slider) and the [sub-line](https://doc.qt.io/qt-5/stylesheet-reference.html#sub-line-sub) of a [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html)."
+        },
+        {
+            "name": "::tab",
+            "description": "The tab of a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) or [QToolBox](https://doc.qt.io/qt-5/qtoolbox.html)."
+        },
+        {
+            "name": "::tab-bar",
+            "description": "The tab bar of a [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html). This subcontrol exists only to control the position of the [QTabBar](https://doc.qt.io/qt-5/qtabbar.html) inside the [QTabWidget](https://doc.qt.io/qt-5/qtabwidget.html). To style the tabs using the [::tab](https://doc.qt.io/qt-5/stylesheet-reference.html#tab-sub) subcontrol."
+        },
+        {
+            "name": "::tear",
+            "description": "The tear indicator of a [QTabBar](https://doc.qt.io/qt-5/qtabbar.html)."
+        },
+        {
+            "name": "::tearoff",
+            "description": "The tear-off indicator of a [QMenu](https://doc.qt.io/qt-5/qmenu.html)."
+        },
+        {
+            "name": "::text",
+            "description": "The text of a [QAbstractItemView](https://doc.qt.io/qt-5/qabstractitemview.html)."
+        },
+        {
+            "name": "::title",
+            "description": "The title of a [QGroupBox](https://doc.qt.io/qt-5/qgroupbox.html) or a [QDockWidget](https://doc.qt.io/qt-5/qdockwidget.html)."
+        },
+        {
+            "name": "::up-arrow",
+            "description": "The up arrow of a [QHeaderView](https://doc.qt.io/qt-5/qheaderview.html) (sort indicator), [QScrollBar](https://doc.qt.io/qt-5/qscrollbar.html) or a [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)."
+        },
+        {
+            "name": "::up-button",
+            "description": "The up button of a [QSpinBox](https://doc.qt.io/qt-5/qspinbox.html)."
+        }
+    ]
+}

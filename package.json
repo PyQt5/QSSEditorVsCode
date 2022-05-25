@@ -1,0 +1,120 @@
+{
+	"name": "qsseditor",
+	"displayName": "QSSEditor",
+	"description": "Qt StyleSheet Editor",
+	"version": "0.0.1",
+	"publisher": "Irony",
+	"author": {
+		"name": "Irony",
+		"url": "https://pyqt.site"
+	},
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"keywords": [
+		"qss",
+		"qt",
+		"designer",
+		"style sheet"
+	],
+	"categories": [
+		"Programming Languages",
+		"Other"
+	],
+	"icon": "./images/designer.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PyQt5/DesignerPlugin.git"
+	},
+	"homepage": "https://github.com/PyQt5/DesignerPlugin.git",
+	"activationEvents": [
+		"onLanguage:css",
+		"onCommand:qsseditor.applyStyle",
+		"onCommand:qsseditor.setPort"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"css": {
+			"customData": [
+				"./data/qss.json"
+			]
+		},
+		"languages": [{
+			"id": "css",
+			"aliases": [
+				"CSS",
+				"QSS"
+			],
+			"extensions": [
+				".qss",
+				".css",
+				".style"
+			],
+			"filenames": [
+				".css",
+				".qss",
+				".style"
+			]
+		}],
+		"commands": [{
+				"command": "qsseditor.applyStyle",
+				"title": "%qsseditor.applyStyle.title%"
+			},
+			{
+				"command": "qsseditor.setPort",
+				"title": "%qsseditor.setPort.title%"
+			}
+		],
+		"keybindings": [{
+			"command": "qsseditor.applyStyle",
+			"key": "Shift+Alt+P",
+			"when": "editorTextFocus && editorLangId =~ /^css$|^qss$/"
+		}],
+		"menus": {
+			"editor/context": [{
+				"when": "editorTextFocus && editorLangId =~ /^css$|^qss$/",
+				"command": "qsseditor.applyStyle",
+				"group": "navigation"
+			}]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "QSSEditor Configure",
+			"properties": {
+				"qsseditor.autoApply": {
+					"type": "boolean",
+					"default": true,
+					"description": "Auto apply style sheet"
+				},
+				"qsseditor.serverPort": {
+					"type": "integer",
+					"default": 61052,
+					"minimum": 1,
+					"maximum": 65535,
+					"description": "DesignerProxy Port"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "cd scripts && python generate_data.py",
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.67.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.14.0",
+		"glob": "^8.0.1",
+		"mocha": "^9.2.2",
+		"typescript": "^4.6.4",
+		"vscode": "^1.1.37"
+	},
+	"dependencies": {
+		"rpc-websockets": "^7.4.18"
+	}
+}
