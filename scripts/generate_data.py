@@ -10,8 +10,10 @@ Created on 2022/05/19
 """
 
 from collections import OrderedDict
+import os
 import re
 import json
+import sys
 import requests
 from pyquery import PyQuery
 
@@ -96,7 +98,8 @@ def generate_props(doc):
         d['url'] = 'https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties'
         references.append(d)
 
-        prop['name'] = tds[0].text().replace('*', '').strip()
+        prop['name'] = tds[0].text().replace('*',
+                                             '').strip().strip('{').strip('}')
         prop['description'] = desc
         prop['references'] = references
         if syntax in g_syntax:
@@ -139,6 +142,8 @@ if __name__ == '__main__':
     data['properties'] = generate_props(doc)
     data['pseudoClasses'] = generate_pseudoClasses(doc)
     data['pseudoElements'] = generate_pseudoElements(doc)
-    with open('../data/qss.json', 'wb') as fp:
+    with open(
+            os.path.join(os.path.dirname(os.path.dirname(sys.argv[0])), 'data',
+                         'qss.json'), 'wb') as fp:
         fp.write(json.dumps(data, indent=4).encode())
     print('generate qss.json finished')
