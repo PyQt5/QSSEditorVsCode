@@ -2,6 +2,19 @@ const vscode = require('vscode');
 const client = require('./client.js');
 
 /**
+ * 定义跳转
+ * @param {vscode.TextDocument} document 
+ * @param {vscode.Position} position 
+ * @param {vscode.CancellationToken} token 
+ */
+function provideDefinition(document, position, token) {
+	const word = document.getText(document.getWordRangeAtPosition(position));
+	if (word.startsWith('Q') || word.startsWith('#')) {
+		console.log('provideDefinition: ' + word);
+	}
+}
+
+/**
  * 插件被激活时触发
  * @param {vscode.ExtensionContext} context
  */
@@ -19,6 +32,15 @@ function activate(context) {
 	// 注册设置端口命令
 	context.subscriptions.push(vscode.commands.registerCommand('qsseditor.setPort', function () {
 		client.setPort();
+	}));
+
+	// 注册跳转定义
+	context.subscriptions.push(vscode.languages.registerDefinitionProvider({
+		scheme: 'file',
+		language: 'css',
+		pattern: '**/*.{css,qss,style}'
+	}, {
+		provideDefinition
 	}));
 
 	// 注册事件
