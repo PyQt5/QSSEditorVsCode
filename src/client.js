@@ -89,6 +89,7 @@ function applyStyle(doc) {
         styleSheets.push(document.getText());
     }
 
+    if (styleSheets.length == 0) return;
     g_client.notify('setStyleSheet', styleSheets);
 };
 

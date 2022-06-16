@@ -1523,7 +1523,7 @@
             "syntax": "{ top\n| bottom\n| left\n| right\n| center }*"
         },
         {
-            "name": "titlebar-show-tooltips-on-buttons}",
+            "name": "titlebar-show-tooltips-on-buttons",
             "description": {
                 "kind": "markdown",
                 "value": "Whether tool tips are shown on window title bar buttons."
