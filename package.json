@@ -86,6 +86,11 @@
 					"default": true,
 					"description": "Auto apply style sheet"
 				},
+				"qsseditor.serverHost": {
+					"type": "string",
+					"default": "127.0.0.1",
+					"description": "DesignerProxy Host"
+				},
 				"qsseditor.serverPort": {
 					"type": "integer",
 					"default": 61052,

@@ -7,6 +7,7 @@ var g_timerConnect; // 重连定时器
 var g_timerApply; // 延迟应用样式
 var g_autoApply = true; // 是否启用自动应用样式
 var g_valid = true;
+var g_host = "localhost";
 var g_port = 61052;
 var g_zh = false;
 
@@ -23,6 +24,14 @@ function initKeywords(context) {
 };
 
 /**
+ * 初始化服务端地址和端口
+ */
+function initAddress() {
+    g_host = vscode.workspace.getConfiguration().get('qsseditor.serverHost', '127.0.0.1');
+    g_port = Number(vscode.workspace.getConfiguration().get('qsseditor.serverPort', '61052'));
+};
+
+/**
  * 启动客户端
  */
 function startClient() {
@@ -32,7 +41,9 @@ function startClient() {
         g_timerConnect = undefined;
     }
     if (!g_valid) return;
-    g_client = new RpcWebSocket('ws://localhost:' + g_port, {
+
+    initAddress();
+    g_client = new RpcWebSocket('ws://' + g_host + ':' + g_port, {
         reconnect: false
     });
     g_client.on('open', function () {
@@ -59,6 +70,14 @@ function stopClient() {
     console.log('NodeClient::stop');
     g_valid = false;
     if (g_client != undefined) g_client.close();
+};
+
+/**
+ * 选中控件
+ */
+function selectWidget(word) {
+    if (g_client == undefined) return;
+    g_client.notify('selectWidget', [word]);
 };
 
 /**
@@ -91,13 +110,6 @@ function applyStyle(doc) {
 
     if (styleSheets.length == 0) return;
     g_client.notify('setStyleSheet', styleSheets);
-};
-
-/**
- * 初始化端口
- */
-function initPort(port) {
-    g_port = port;
 };
 
 /**
@@ -168,8 +180,8 @@ module.exports = {
     initKeywords,
     startClient,
     stopClient,
+    selectWidget,
     applyStyle,
-    initPort,
     setPort,
     onDidChangeTextDocument,
     onDidSaveTextDocument,

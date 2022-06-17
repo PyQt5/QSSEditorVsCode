@@ -10,7 +10,7 @@ const client = require('./client.js');
 function provideDefinition(document, position, token) {
 	const word = document.getText(document.getWordRangeAtPosition(position));
 	if (word.startsWith('Q') || word.startsWith('#')) {
-		console.log('provideDefinition: ' + word);
+		client.selectWidget(word);
 	}
 }
 
@@ -21,8 +21,6 @@ function provideDefinition(document, position, token) {
 function activate(context) {
 	console.log('extension "qsseditor" is now active!');
 	console.log(process.env);
-
-	client.initPort(Number(vscode.workspace.getConfiguration().get('qsseditor.serverPort', '61052')));
 
 	// 注册命令应用样式命令
 	context.subscriptions.push(vscode.commands.registerCommand('qsseditor.applyStyle', function () {
