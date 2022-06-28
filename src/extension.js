@@ -33,11 +33,15 @@ function activate(context) {
 	}));
 
 	// 注册跳转定义
-	context.subscriptions.push(vscode.languages.registerDefinitionProvider({
+	context.subscriptions.push(vscode.languages.registerDefinitionProvider([{
 		scheme: 'file',
 		language: 'css',
 		pattern: '**/*.{css,qss,style}'
 	}, {
+		scheme: 'untitled',
+		language: 'css',
+		pattern: '**/*.{css,qss,style}'
+	}], {
 		provideDefinition
 	}));
 
