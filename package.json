@@ -24,9 +24,9 @@
 	"icon": "images/designer.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/PyQt5/DesignerPlugin.git"
+		"url": "https://github.com/PyQt5/QSSEditorVsCode"
 	},
-	"homepage": "https://github.com/PyQt5/DesignerPlugin.git",
+	"homepage": "https://github.com/PyQt5/QSSEditorVsCode",
 	"activationEvents": [
 		"onLanguage:css",
 		"onCommand:qsseditor.applyStyle",
