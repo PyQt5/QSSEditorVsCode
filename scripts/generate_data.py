@@ -9,11 +9,12 @@ Created on 2022/05/19
 @description:
 """
 
-from collections import OrderedDict
+import json
 import os
 import re
-import json
 import sys
+from collections import OrderedDict
+
 import requests
 from pyquery import PyQuery
 
@@ -131,15 +132,101 @@ def generate_pseudoElements(doc):
     return pseudoElements
 
 
+def generate_qprops():
+    """
+    生成qproperty属性节点
+    """
+    properties = []
+    names = [
+        'QAbstractScrollArea', 'QAbstractSlider', 'QAbstractSpinBox',
+        'QCalendarWidget', 'QCheckBox', 'QColorDialog', 'QColumnView',
+        'QComboBox', 'QCommandLinkButton', 'QDateEdit', 'QDateTimeEdit',
+        'QDial', 'QDialog', 'QDialogButtonBox', 'QDockWidget', 'QDoubleSpinBox',
+        'QErrorMessage', 'QFileDialog', 'QFocusFrame', 'QFontComboBox',
+        'QFontDialog', 'QFrame', 'QGraphicsView', 'QGroupBox', 'QHeaderView',
+        'QInputDialog', 'QKeySequenceEdit', 'QLCDNumber', 'QLabel', 'QLineEdit',
+        'QListView', 'QListWidget', 'QMainWindow', 'QMdiArea', 'QMdiSubWindow',
+        'QMenu', 'QMenuBar', 'QMessageBox', 'QOpenGLWidget', 'QPlainTextEdit',
+        'QProgressBar', 'QProgressDialog', 'QPushButton', 'QRadioButton',
+        'QRubberBand', 'QScrollArea', 'QScrollBar', 'QSlider', 'QSpinBox',
+        'QSplashScreen', 'QSplitter', 'QStackedWidget', 'QStatusBar', 'QTabBar',
+        'QTabWidget', 'QTableView', 'QTableWidget', 'QTextBrowser', 'QTextEdit',
+        'QTimeEdit', 'QToolBar', 'QToolBox', 'QToolButton', 'QTreeView',
+        'QTreeWidget', 'QUndoView', 'QWidget', 'QWizard', 'QWizardPage'
+    ]
+
+    from PyQt5 import QtWidgets
+    from PyQt5.QtCore import Qt
+
+    app = QtWidgets.QApplication(sys.argv)
+    pset = set()
+
+    for name in names:
+        try:
+            if name == 'QHeaderView':
+                w = getattr(QtWidgets, name)(Qt.Horizontal)
+            elif name == 'QRubberBand':
+                w = getattr(QtWidgets, name)(QtWidgets.QRubberBand.Rectangle)
+            else:
+                w = getattr(QtWidgets, name)()
+            # print(w)
+            metaObject = w.metaObject()
+            for i in range(metaObject.propertyOffset(),
+                           metaObject.propertyCount()):
+                p = metaObject.property(i)
+
+                if not hasattr(w, p.name()) or p.name(
+                ) in pset or not p.isWritable() or not p.isDesignable():
+                    continue
+
+                field = getattr(w, p.name())
+                pset.add(p.name())
+                prop = OrderedDict()
+                prop['name'] = 'qproperty-' + p.name()
+
+                desc = OrderedDict()
+                desc['kind'] = 'markdown'
+                desc['value'] = field.__doc__
+
+                prop['description'] = desc
+                properties.append(prop)
+        except Exception as e:
+            print(e)
+
+    for prop in properties:
+        pname = prop['name'].replace('qproperty-', '')
+        clazzs = []
+        for name in names:
+            try:
+                if name == 'QHeaderView':
+                    w = getattr(QtWidgets, name)(Qt.Horizontal)
+                elif name == 'QRubberBand':
+                    w = getattr(QtWidgets,
+                                name)(QtWidgets.QRubberBand.Rectangle)
+                else:
+                    w = getattr(QtWidgets, name)()
+                if hasattr(w, pname):
+                    clazzs.append('`%s`' % name)
+            except Exception as e:
+                print(e)
+        if clazzs:
+            prop['description']['value'] = prop['description'][
+                'value'] + '\n\n' + '\n'.join(clazzs)
+    return properties
+
+
 if __name__ == '__main__':
     print('generate qss.json started')
-    doc = PyQuery(
-        requests.get(
-            'https://doc.qt.io/qt-5/stylesheet-reference.html').content)
+    if not os.path.exists('stylesheet-reference.html'):
+        open('stylesheet-reference.html', 'wb').write(
+            requests.get(
+                'https://doc.qt.io/qt-5/stylesheet-reference.html').content)
+
+    doc = PyQuery(open('stylesheet-reference.html', 'rb').read())
     data = OrderedDict()
     data['version'] = 1.1
     generate_types(doc)
-    data['properties'] = generate_props(doc)
+    data['properties'] = generate_props(doc) + generate_qprops()
     data['pseudoClasses'] = generate_pseudoClasses(doc)
     data['pseudoElements'] = generate_pseudoElements(doc)
     with open(

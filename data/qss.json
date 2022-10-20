@@ -828,7 +828,7 @@
             "name": "icon",
             "description": {
                 "kind": "markdown",
-                "value": "The icon that is used, for widgets that have an icon.\n\nThe only widget currently supporting this property is [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html).\n\n\n\n\nNote: It's the application's responsibilty to assign an icon to a button (using the [QAbstractButton](https://doc.qt.io/qt-5/qabstractbutton.html) API), and not the style's. So be careful setting it unless your stylesheet is targeting a specific application.\n\n\n\n\nAvailable since 5.15."
+                "value": "The icon that is used, for widgets that have an icon.\n\nThe only widget currently supporting this property is [QPushButton](https://doc.qt.io/qt-5/qpushbutton.html).\n\n\n\n\nNote: It's the application's responsibility to assign an icon to a button (using the [QAbstractButton](https://doc.qt.io/qt-5/qabstractbutton.html) API), and not the style's. So be careful setting it unless your stylesheet is targeting a specific application.\n\n\n\n\nAvailable since 5.15."
             },
             "references": [
                 {
@@ -1650,6 +1650,1616 @@
                     "url": "https://doc.qt.io/qt-5/stylesheet-reference.html#list-of-properties"
                 }
             ]
+        },
+        {
+            "name": "qproperty-verticalScrollBarPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "verticalScrollBarPolicy(self) -> Qt.ScrollBarPolicy\n\n`QAbstractScrollArea`\n`QColumnView`\n`QGraphicsView`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-horizontalScrollBarPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "horizontalScrollBarPolicy(self) -> Qt.ScrollBarPolicy\n\n`QAbstractScrollArea`\n`QColumnView`\n`QGraphicsView`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-sizeAdjustPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "sizeAdjustPolicy(self) -> QAbstractScrollArea.SizeAdjustPolicy\n\n`QAbstractScrollArea`\n`QColumnView`\n`QComboBox`\n`QFontComboBox`\n`QGraphicsView`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-minimum",
+            "description": {
+                "kind": "markdown",
+                "value": "minimum(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QDoubleSpinBox`\n`QProgressBar`\n`QProgressDialog`\n`QScrollBar`\n`QSlider`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-maximum",
+            "description": {
+                "kind": "markdown",
+                "value": "maximum(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QDoubleSpinBox`\n`QProgressBar`\n`QProgressDialog`\n`QScrollBar`\n`QSlider`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-singleStep",
+            "description": {
+                "kind": "markdown",
+                "value": "singleStep(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QDoubleSpinBox`\n`QScrollBar`\n`QSlider`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-pageStep",
+            "description": {
+                "kind": "markdown",
+                "value": "pageStep(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QScrollBar`\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-value",
+            "description": {
+                "kind": "markdown",
+                "value": "value(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QDoubleSpinBox`\n`QLCDNumber`\n`QProgressBar`\n`QProgressDialog`\n`QScrollBar`\n`QSlider`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-sliderPosition",
+            "description": {
+                "kind": "markdown",
+                "value": "sliderPosition(self) -> int\n\n`QAbstractSlider`\n`QDial`\n`QScrollBar`\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-orientation",
+            "description": {
+                "kind": "markdown",
+                "value": "orientation(self) -> Qt.Orientation\n\n`QAbstractSlider`\n`QDial`\n`QDialogButtonBox`\n`QHeaderView`\n`QProgressBar`\n`QScrollBar`\n`QSlider`\n`QSplitter`\n`QToolBar`"
+            }
+        },
+        {
+            "name": "qproperty-invertedAppearance",
+            "description": {
+                "kind": "markdown",
+                "value": "invertedAppearance(self) -> bool\n\n`QAbstractSlider`\n`QDial`\n`QScrollBar`\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-invertedControls",
+            "description": {
+                "kind": "markdown",
+                "value": "invertedControls(self) -> bool\n\n`QAbstractSlider`\n`QDial`\n`QScrollBar`\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-wrapping",
+            "description": {
+                "kind": "markdown",
+                "value": "wrapping(self) -> bool\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDoubleSpinBox`\n`QSpinBox`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-alignment",
+            "description": {
+                "kind": "markdown",
+                "value": "alignment(self) -> Qt.Alignment\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QGraphicsView`\n`QGroupBox`\n`QLabel`\n`QLineEdit`\n`QProgressBar`\n`QScrollArea`\n`QSpinBox`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-buttonSymbols",
+            "description": {
+                "kind": "markdown",
+                "value": "buttonSymbols(self) -> QAbstractSpinBox.ButtonSymbols\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QSpinBox`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-specialValueText",
+            "description": {
+                "kind": "markdown",
+                "value": "specialValueText(self) -> str\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QSpinBox`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-correctionMode",
+            "description": {
+                "kind": "markdown",
+                "value": "correctionMode(self) -> QAbstractSpinBox.CorrectionMode\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QSpinBox`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-keyboardTracking",
+            "description": {
+                "kind": "markdown",
+                "value": "keyboardTracking(self) -> bool\n\n`QAbstractSpinBox`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QSpinBox`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-selectedDate",
+            "description": {
+                "kind": "markdown",
+                "value": "selectedDate(self) -> QDate\n\n`QCalendarWidget`"
+            }
+        },
+        {
+            "name": "qproperty-minimumDate",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumDate(self) -> QDate\n\n`QCalendarWidget`\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-maximumDate",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumDate(self) -> QDate\n\n`QCalendarWidget`\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-firstDayOfWeek",
+            "description": {
+                "kind": "markdown",
+                "value": "firstDayOfWeek(self) -> Qt.DayOfWeek\n\n`QCalendarWidget`"
+            }
+        },
+        {
+            "name": "qproperty-selectionMode",
+            "description": {
+                "kind": "markdown",
+                "value": "selectionMode(self) -> QCalendarWidget.SelectionMode\n\n`QCalendarWidget`\n`QColumnView`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QTableView`\n`QTableWidget`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-horizontalHeaderFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "horizontalHeaderFormat(self) -> QCalendarWidget.HorizontalHeaderFormat\n\n`QCalendarWidget`"
+            }
+        },
+        {
+            "name": "qproperty-verticalHeaderFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "verticalHeaderFormat(self) -> QCalendarWidget.VerticalHeaderFormat\n\n`QCalendarWidget`"
+            }
+        },
+        {
+            "name": "qproperty-dateEditAcceptDelay",
+            "description": {
+                "kind": "markdown",
+                "value": "dateEditAcceptDelay(self) -> int\n\n`QCalendarWidget`"
+            }
+        },
+        {
+            "name": "qproperty-currentColor",
+            "description": {
+                "kind": "markdown",
+                "value": "currentColor(self) -> QColor\n\n`QColorDialog`"
+            }
+        },
+        {
+            "name": "qproperty-options",
+            "description": {
+                "kind": "markdown",
+                "value": "options(self) -> QColorDialog.ColorDialogOptions\n\n`QColorDialog`\n`QFileDialog`\n`QFontDialog`\n`QInputDialog`\n`QWizard`"
+            }
+        },
+        {
+            "name": "qproperty-resizeGripsVisible",
+            "description": {
+                "kind": "markdown",
+                "value": "resizeGripsVisible(self) -> bool\n\n`QColumnView`"
+            }
+        },
+        {
+            "name": "qproperty-currentText",
+            "description": {
+                "kind": "markdown",
+                "value": "currentText(self) -> str\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-currentIndex",
+            "description": {
+                "kind": "markdown",
+                "value": "currentIndex(self) -> int\n\n`QColumnView`\n`QComboBox`\n`QFontComboBox`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QStackedWidget`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QToolBox`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-maxVisibleItems",
+            "description": {
+                "kind": "markdown",
+                "value": "maxVisibleItems(self) -> int\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-maxCount",
+            "description": {
+                "kind": "markdown",
+                "value": "maxCount(self) -> int\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-insertPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "insertPolicy(self) -> QComboBox.InsertPolicy\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-minimumContentsLength",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumContentsLength(self) -> int\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-iconSize",
+            "description": {
+                "kind": "markdown",
+                "value": "iconSize(self) -> QSize\n\n`QCheckBox`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QFontComboBox`\n`QHeaderView`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QPushButton`\n`QRadioButton`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QToolBar`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-placeholderText",
+            "description": {
+                "kind": "markdown",
+                "value": "placeholderText(self) -> str\n\n`QComboBox`\n`QFontComboBox`\n`QLineEdit`\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-duplicatesEnabled",
+            "description": {
+                "kind": "markdown",
+                "value": "duplicatesEnabled(self) -> bool\n\n`QComboBox`\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-modelColumn",
+            "description": {
+                "kind": "markdown",
+                "value": "modelColumn(self) -> int\n\n`QComboBox`\n`QFontComboBox`\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-description",
+            "description": {
+                "kind": "markdown",
+                "value": "description(self) -> str\n\n`QCommandLinkButton`"
+            }
+        },
+        {
+            "name": "qproperty-date",
+            "description": {
+                "kind": "markdown",
+                "value": "date(self) -> QDate\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-dateTime",
+            "description": {
+                "kind": "markdown",
+                "value": "dateTime(self) -> QDateTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-time",
+            "description": {
+                "kind": "markdown",
+                "value": "time(self) -> QTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-maximumDateTime",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumDateTime(self) -> QDateTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-minimumDateTime",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumDateTime(self) -> QDateTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-maximumTime",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumTime(self) -> QTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-minimumTime",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumTime(self) -> QTime\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-currentSection",
+            "description": {
+                "kind": "markdown",
+                "value": "currentSection(self) -> QDateTimeEdit.Section\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-displayFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "displayFormat(self) -> str\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-calendarPopup",
+            "description": {
+                "kind": "markdown",
+                "value": "calendarPopup(self) -> bool\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-currentSectionIndex",
+            "description": {
+                "kind": "markdown",
+                "value": "currentSectionIndex(self) -> int\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-timeSpec",
+            "description": {
+                "kind": "markdown",
+                "value": "timeSpec(self) -> Qt.TimeSpec\n\n`QDateEdit`\n`QDateTimeEdit`\n`QTimeEdit`"
+            }
+        },
+        {
+            "name": "qproperty-notchTarget",
+            "description": {
+                "kind": "markdown",
+                "value": "notchTarget(self) -> float\n\n`QDial`"
+            }
+        },
+        {
+            "name": "qproperty-notchesVisible",
+            "description": {
+                "kind": "markdown",
+                "value": "notchesVisible(self) -> bool\n\n`QDial`"
+            }
+        },
+        {
+            "name": "qproperty-standardButtons",
+            "description": {
+                "kind": "markdown",
+                "value": "standardButtons(self) -> QDialogButtonBox.StandardButtons\n\n`QDialogButtonBox`\n`QMessageBox`"
+            }
+        },
+        {
+            "name": "qproperty-centerButtons",
+            "description": {
+                "kind": "markdown",
+                "value": "centerButtons(self) -> bool\n\n`QDialogButtonBox`"
+            }
+        },
+        {
+            "name": "qproperty-features",
+            "description": {
+                "kind": "markdown",
+                "value": "features(self) -> QDockWidget.DockWidgetFeatures\n\n`QDockWidget`"
+            }
+        },
+        {
+            "name": "qproperty-allowedAreas",
+            "description": {
+                "kind": "markdown",
+                "value": "allowedAreas(self) -> Qt.DockWidgetAreas\n\n`QDockWidget`\n`QToolBar`"
+            }
+        },
+        {
+            "name": "qproperty-windowTitle",
+            "description": {
+                "kind": "markdown",
+                "value": "windowTitle(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-prefix",
+            "description": {
+                "kind": "markdown",
+                "value": "prefix(self) -> str\n\n`QDoubleSpinBox`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-suffix",
+            "description": {
+                "kind": "markdown",
+                "value": "suffix(self) -> str\n\n`QDoubleSpinBox`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-decimals",
+            "description": {
+                "kind": "markdown",
+                "value": "decimals(self) -> int\n\n`QDoubleSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-stepType",
+            "description": {
+                "kind": "markdown",
+                "value": "stepType(self) -> QAbstractSpinBox.StepType\n\n`QDoubleSpinBox`\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-viewMode",
+            "description": {
+                "kind": "markdown",
+                "value": "viewMode(self) -> QFileDialog.ViewMode\n\n`QFileDialog`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-fileMode",
+            "description": {
+                "kind": "markdown",
+                "value": "fileMode(self) -> QFileDialog.FileMode\n\n`QFileDialog`"
+            }
+        },
+        {
+            "name": "qproperty-acceptMode",
+            "description": {
+                "kind": "markdown",
+                "value": "acceptMode(self) -> QFileDialog.AcceptMode\n\n`QFileDialog`"
+            }
+        },
+        {
+            "name": "qproperty-defaultSuffix",
+            "description": {
+                "kind": "markdown",
+                "value": "defaultSuffix(self) -> str\n\n`QFileDialog`"
+            }
+        },
+        {
+            "name": "qproperty-supportedSchemes",
+            "description": {
+                "kind": "markdown",
+                "value": "supportedSchemes(self) -> List[str]\n\n`QFileDialog`"
+            }
+        },
+        {
+            "name": "qproperty-writingSystem",
+            "description": {
+                "kind": "markdown",
+                "value": "writingSystem(self) -> QFontDatabase.WritingSystem\n\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-fontFilters",
+            "description": {
+                "kind": "markdown",
+                "value": "fontFilters(self) -> QFontComboBox.FontFilters\n\n`QFontComboBox`"
+            }
+        },
+        {
+            "name": "qproperty-currentFont",
+            "description": {
+                "kind": "markdown",
+                "value": "currentFont(self) -> QFont\n\n`QFontComboBox`\n`QFontDialog`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-frameShape",
+            "description": {
+                "kind": "markdown",
+                "value": "frameShape(self) -> QFrame.Shape\n\n`QAbstractScrollArea`\n`QColumnView`\n`QFrame`\n`QGraphicsView`\n`QHeaderView`\n`QLCDNumber`\n`QLabel`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QSplitter`\n`QStackedWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QToolBox`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-frameShadow",
+            "description": {
+                "kind": "markdown",
+                "value": "frameShadow(self) -> QFrame.Shadow\n\n`QAbstractScrollArea`\n`QColumnView`\n`QFrame`\n`QGraphicsView`\n`QHeaderView`\n`QLCDNumber`\n`QLabel`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QSplitter`\n`QStackedWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QToolBox`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-lineWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "lineWidth(self) -> int\n\n`QAbstractScrollArea`\n`QColumnView`\n`QFrame`\n`QGraphicsView`\n`QHeaderView`\n`QLCDNumber`\n`QLabel`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QSplitter`\n`QStackedWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QToolBox`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-midLineWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "midLineWidth(self) -> int\n\n`QAbstractScrollArea`\n`QColumnView`\n`QFrame`\n`QGraphicsView`\n`QHeaderView`\n`QLCDNumber`\n`QLabel`\n`QListView`\n`QListWidget`\n`QMdiArea`\n`QPlainTextEdit`\n`QScrollArea`\n`QSplitter`\n`QStackedWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QToolBox`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-backgroundBrush",
+            "description": {
+                "kind": "markdown",
+                "value": "backgroundBrush(self) -> QBrush\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-foregroundBrush",
+            "description": {
+                "kind": "markdown",
+                "value": "foregroundBrush(self) -> QBrush\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-sceneRect",
+            "description": {
+                "kind": "markdown",
+                "value": "sceneRect(self) -> QRectF\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-renderHints",
+            "description": {
+                "kind": "markdown",
+                "value": "renderHints(self) -> QPainter.RenderHints\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-dragMode",
+            "description": {
+                "kind": "markdown",
+                "value": "dragMode(self) -> QGraphicsView.DragMode\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-cacheMode",
+            "description": {
+                "kind": "markdown",
+                "value": "cacheMode(self) -> QGraphicsView.CacheMode\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-transformationAnchor",
+            "description": {
+                "kind": "markdown",
+                "value": "transformationAnchor(self) -> QGraphicsView.ViewportAnchor\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-resizeAnchor",
+            "description": {
+                "kind": "markdown",
+                "value": "resizeAnchor(self) -> QGraphicsView.ViewportAnchor\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-viewportUpdateMode",
+            "description": {
+                "kind": "markdown",
+                "value": "viewportUpdateMode(self) -> QGraphicsView.ViewportUpdateMode\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-rubberBandSelectionMode",
+            "description": {
+                "kind": "markdown",
+                "value": "rubberBandSelectionMode(self) -> Qt.ItemSelectionMode\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-optimizationFlags",
+            "description": {
+                "kind": "markdown",
+                "value": "optimizationFlags(self) -> QGraphicsView.OptimizationFlags\n\n`QGraphicsView`"
+            }
+        },
+        {
+            "name": "qproperty-title",
+            "description": {
+                "kind": "markdown",
+                "value": "title(self) -> str\n\n`QGroupBox`\n`QMenu`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-highlightSections",
+            "description": {
+                "kind": "markdown",
+                "value": "highlightSections(self) -> bool\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-stretchLastSection",
+            "description": {
+                "kind": "markdown",
+                "value": "stretchLastSection(self) -> bool\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-cascadingSectionResizes",
+            "description": {
+                "kind": "markdown",
+                "value": "cascadingSectionResizes(self) -> bool\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-defaultSectionSize",
+            "description": {
+                "kind": "markdown",
+                "value": "defaultSectionSize(self) -> int\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-minimumSectionSize",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumSectionSize(self) -> int\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-maximumSectionSize",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumSectionSize(self) -> int\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-defaultAlignment",
+            "description": {
+                "kind": "markdown",
+                "value": "defaultAlignment(self) -> Qt.Alignment\n\n`QHeaderView`"
+            }
+        },
+        {
+            "name": "qproperty-keySequence",
+            "description": {
+                "kind": "markdown",
+                "value": "keySequence(self) -> QKeySequence\n\n`QKeySequenceEdit`"
+            }
+        },
+        {
+            "name": "qproperty-smallDecimalPoint",
+            "description": {
+                "kind": "markdown",
+                "value": "smallDecimalPoint(self) -> bool\n\n`QLCDNumber`"
+            }
+        },
+        {
+            "name": "qproperty-digitCount",
+            "description": {
+                "kind": "markdown",
+                "value": "digitCount(self) -> int\n\n`QLCDNumber`"
+            }
+        },
+        {
+            "name": "qproperty-mode",
+            "description": {
+                "kind": "markdown",
+                "value": "mode(self) -> QLCDNumber.Mode\n\n`QLCDNumber`"
+            }
+        },
+        {
+            "name": "qproperty-segmentStyle",
+            "description": {
+                "kind": "markdown",
+                "value": "segmentStyle(self) -> QLCDNumber.SegmentStyle\n\n`QLCDNumber`"
+            }
+        },
+        {
+            "name": "qproperty-intValue",
+            "description": {
+                "kind": "markdown",
+                "value": "intValue(self) -> int\n\n`QInputDialog`\n`QLCDNumber`"
+            }
+        },
+        {
+            "name": "qproperty-text",
+            "description": {
+                "kind": "markdown",
+                "value": "text(self) -> str\n\n`QAbstractSpinBox`\n`QCheckBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDoubleSpinBox`\n`QLabel`\n`QLineEdit`\n`QMessageBox`\n`QProgressBar`\n`QPushButton`\n`QRadioButton`\n`QSpinBox`\n`QTimeEdit`\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-textFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "textFormat(self) -> Qt.TextFormat\n\n`QLabel`\n`QMessageBox`"
+            }
+        },
+        {
+            "name": "qproperty-pixmap",
+            "description": {
+                "kind": "markdown",
+                "value": "pixmap(self) -> QPixmap\n\n`QLabel`\n`QSplashScreen`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-wordWrap",
+            "description": {
+                "kind": "markdown",
+                "value": "wordWrap(self) -> bool\n\n`QLabel`\n`QListView`\n`QListWidget`\n`QTableView`\n`QTableWidget`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-margin",
+            "description": {
+                "kind": "markdown",
+                "value": "margin(self) -> int\n\n`QLabel`"
+            }
+        },
+        {
+            "name": "qproperty-indent",
+            "description": {
+                "kind": "markdown",
+                "value": "indent(self) -> int\n\n`QLabel`"
+            }
+        },
+        {
+            "name": "qproperty-openExternalLinks",
+            "description": {
+                "kind": "markdown",
+                "value": "openExternalLinks(self) -> bool\n\n`QLabel`\n`QTextBrowser`"
+            }
+        },
+        {
+            "name": "qproperty-textInteractionFlags",
+            "description": {
+                "kind": "markdown",
+                "value": "textInteractionFlags(self) -> Qt.TextInteractionFlags\n\n`QLabel`\n`QMessageBox`\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-inputMask",
+            "description": {
+                "kind": "markdown",
+                "value": "inputMask(self) -> str\n\n`QLineEdit`"
+            }
+        },
+        {
+            "name": "qproperty-maxLength",
+            "description": {
+                "kind": "markdown",
+                "value": "maxLength(self) -> int\n\n`QLineEdit`"
+            }
+        },
+        {
+            "name": "qproperty-echoMode",
+            "description": {
+                "kind": "markdown",
+                "value": "echoMode(self) -> QLineEdit.EchoMode\n\n`QLineEdit`"
+            }
+        },
+        {
+            "name": "qproperty-cursorPosition",
+            "description": {
+                "kind": "markdown",
+                "value": "cursorPosition(self) -> int\n\n`QLineEdit`"
+            }
+        },
+        {
+            "name": "qproperty-dragEnabled",
+            "description": {
+                "kind": "markdown",
+                "value": "dragEnabled(self) -> bool\n\n`QColumnView`\n`QHeaderView`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QTableView`\n`QTableWidget`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-cursorMoveStyle",
+            "description": {
+                "kind": "markdown",
+                "value": "cursorMoveStyle(self) -> Qt.CursorMoveStyle\n\n`QLineEdit`"
+            }
+        },
+        {
+            "name": "qproperty-movement",
+            "description": {
+                "kind": "markdown",
+                "value": "movement(self) -> QListView.Movement\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-flow",
+            "description": {
+                "kind": "markdown",
+                "value": "flow(self) -> QListView.Flow\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-isWrapping",
+            "description": {
+                "kind": "markdown",
+                "value": "isWrapping(self) -> bool\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-resizeMode",
+            "description": {
+                "kind": "markdown",
+                "value": "resizeMode(self) -> QListView.ResizeMode\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-layoutMode",
+            "description": {
+                "kind": "markdown",
+                "value": "layoutMode(self) -> QListView.LayoutMode\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-spacing",
+            "description": {
+                "kind": "markdown",
+                "value": "spacing(self) -> int\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-gridSize",
+            "description": {
+                "kind": "markdown",
+                "value": "gridSize(self) -> QSize\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-uniformItemSizes",
+            "description": {
+                "kind": "markdown",
+                "value": "uniformItemSizes(self) -> bool\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-batchSize",
+            "description": {
+                "kind": "markdown",
+                "value": "batchSize(self) -> int\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-itemAlignment",
+            "description": {
+                "kind": "markdown",
+                "value": "itemAlignment(self) -> Qt.Alignment\n\n`QListView`\n`QListWidget`\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-currentRow",
+            "description": {
+                "kind": "markdown",
+                "value": "currentRow(self) -> int\n\n`QListWidget`\n`QTableWidget`"
+            }
+        },
+        {
+            "name": "qproperty-toolButtonStyle",
+            "description": {
+                "kind": "markdown",
+                "value": "toolButtonStyle(self) -> Qt.ToolButtonStyle\n\n`QMainWindow`\n`QToolBar`\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-documentMode",
+            "description": {
+                "kind": "markdown",
+                "value": "documentMode(self) -> bool\n\n`QMainWindow`\n`QMdiArea`\n`QTabBar`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-tabShape",
+            "description": {
+                "kind": "markdown",
+                "value": "tabShape(self) -> QTabWidget.TabShape\n\n`QMainWindow`\n`QMdiArea`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-dockOptions",
+            "description": {
+                "kind": "markdown",
+                "value": "dockOptions(self) -> QMainWindow.DockOptions\n\n`QMainWindow`"
+            }
+        },
+        {
+            "name": "qproperty-unifiedTitleAndToolBarOnMac",
+            "description": {
+                "kind": "markdown",
+                "value": "unifiedTitleAndToolBarOnMac(self) -> bool\n\n`QMainWindow`"
+            }
+        },
+        {
+            "name": "qproperty-background",
+            "description": {
+                "kind": "markdown",
+                "value": "background(self) -> QBrush\n\n`QMdiArea`"
+            }
+        },
+        {
+            "name": "qproperty-activationOrder",
+            "description": {
+                "kind": "markdown",
+                "value": "activationOrder(self) -> QMdiArea.WindowOrder\n\n`QMdiArea`"
+            }
+        },
+        {
+            "name": "qproperty-tabsClosable",
+            "description": {
+                "kind": "markdown",
+                "value": "tabsClosable(self) -> bool\n\n`QMdiArea`\n`QTabBar`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-tabsMovable",
+            "description": {
+                "kind": "markdown",
+                "value": "tabsMovable(self) -> bool\n\n`QMdiArea`"
+            }
+        },
+        {
+            "name": "qproperty-tabPosition",
+            "description": {
+                "kind": "markdown",
+                "value": "tabPosition(self) -> QTabWidget.TabPosition\n\n`QMainWindow`\n`QMdiArea`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-keyboardSingleStep",
+            "description": {
+                "kind": "markdown",
+                "value": "keyboardSingleStep(self) -> int\n\n`QMdiSubWindow`"
+            }
+        },
+        {
+            "name": "qproperty-keyboardPageStep",
+            "description": {
+                "kind": "markdown",
+                "value": "keyboardPageStep(self) -> int\n\n`QMdiSubWindow`"
+            }
+        },
+        {
+            "name": "qproperty-icon",
+            "description": {
+                "kind": "markdown",
+                "value": "icon(self) -> QIcon\n\n`QCheckBox`\n`QCommandLinkButton`\n`QMenu`\n`QMessageBox`\n`QPushButton`\n`QRadioButton`\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-separatorsCollapsible",
+            "description": {
+                "kind": "markdown",
+                "value": "separatorsCollapsible(self) -> bool\n\n`QMenu`"
+            }
+        },
+        {
+            "name": "qproperty-toolTipsVisible",
+            "description": {
+                "kind": "markdown",
+                "value": "toolTipsVisible(self) -> bool\n\n`QMenu`"
+            }
+        },
+        {
+            "name": "qproperty-iconPixmap",
+            "description": {
+                "kind": "markdown",
+                "value": "iconPixmap(self) -> QPixmap\n\n`QMessageBox`"
+            }
+        },
+        {
+            "name": "qproperty-detailedText",
+            "description": {
+                "kind": "markdown",
+                "value": "detailedText(self) -> str\n\n`QMessageBox`"
+            }
+        },
+        {
+            "name": "qproperty-informativeText",
+            "description": {
+                "kind": "markdown",
+                "value": "informativeText(self) -> str\n\n`QMessageBox`"
+            }
+        },
+        {
+            "name": "qproperty-tabChangesFocus",
+            "description": {
+                "kind": "markdown",
+                "value": "tabChangesFocus(self) -> bool\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-documentTitle",
+            "description": {
+                "kind": "markdown",
+                "value": "documentTitle(self) -> str\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-lineWrapMode",
+            "description": {
+                "kind": "markdown",
+                "value": "lineWrapMode(self) -> QPlainTextEdit.LineWrapMode\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-overwriteMode",
+            "description": {
+                "kind": "markdown",
+                "value": "overwriteMode(self) -> bool\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-tabStopWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "tabStopWidth(self) -> int\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-tabStopDistance",
+            "description": {
+                "kind": "markdown",
+                "value": "tabStopDistance(self) -> float\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-cursorWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "cursorWidth(self) -> int\n\n`QPlainTextEdit`\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-maximumBlockCount",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumBlockCount(self) -> int\n\n`QPlainTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-backgroundVisible",
+            "description": {
+                "kind": "markdown",
+                "value": "backgroundVisible(self) -> bool\n\n`QPlainTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-centerOnScroll",
+            "description": {
+                "kind": "markdown",
+                "value": "centerOnScroll(self) -> bool\n\n`QPlainTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-format",
+            "description": {
+                "kind": "markdown",
+                "value": "format(self) -> str\n\n`QOpenGLWidget`\n`QProgressBar`"
+            }
+        },
+        {
+            "name": "qproperty-autoReset",
+            "description": {
+                "kind": "markdown",
+                "value": "autoReset(self) -> bool\n\n`QProgressDialog`"
+            }
+        },
+        {
+            "name": "qproperty-autoClose",
+            "description": {
+                "kind": "markdown",
+                "value": "autoClose(self) -> bool\n\n`QProgressDialog`"
+            }
+        },
+        {
+            "name": "qproperty-minimumDuration",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumDuration(self) -> int\n\n`QProgressDialog`"
+            }
+        },
+        {
+            "name": "qproperty-labelText",
+            "description": {
+                "kind": "markdown",
+                "value": "labelText(self) -> str\n\n`QFileDialog`\n`QInputDialog`\n`QProgressDialog`"
+            }
+        },
+        {
+            "name": "qproperty-autoDefault",
+            "description": {
+                "kind": "markdown",
+                "value": "autoDefault(self) -> bool\n\n`QCommandLinkButton`\n`QPushButton`"
+            }
+        },
+        {
+            "name": "qproperty-widgetResizable",
+            "description": {
+                "kind": "markdown",
+                "value": "widgetResizable(self) -> bool\n\n`QScrollArea`"
+            }
+        },
+        {
+            "name": "qproperty-tickPosition",
+            "description": {
+                "kind": "markdown",
+                "value": "tickPosition(self) -> QSlider.TickPosition\n\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-tickInterval",
+            "description": {
+                "kind": "markdown",
+                "value": "tickInterval(self) -> int\n\n`QSlider`"
+            }
+        },
+        {
+            "name": "qproperty-displayIntegerBase",
+            "description": {
+                "kind": "markdown",
+                "value": "displayIntegerBase(self) -> int\n\n`QSpinBox`"
+            }
+        },
+        {
+            "name": "qproperty-opaqueResize",
+            "description": {
+                "kind": "markdown",
+                "value": "opaqueResize(self) -> bool\n\n`QSplitter`"
+            }
+        },
+        {
+            "name": "qproperty-handleWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "handleWidth(self) -> int\n\n`QSplitter`"
+            }
+        },
+        {
+            "name": "qproperty-childrenCollapsible",
+            "description": {
+                "kind": "markdown",
+                "value": "childrenCollapsible(self) -> bool\n\n`QSplitter`"
+            }
+        },
+        {
+            "name": "qproperty-shape",
+            "description": {
+                "kind": "markdown",
+                "value": "shape(self) -> QTabBar.Shape\n\n`QRubberBand`\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-drawBase",
+            "description": {
+                "kind": "markdown",
+                "value": "drawBase(self) -> bool\n\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-elideMode",
+            "description": {
+                "kind": "markdown",
+                "value": "elideMode(self) -> Qt.TextElideMode\n\n`QTabBar`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-usesScrollButtons",
+            "description": {
+                "kind": "markdown",
+                "value": "usesScrollButtons(self) -> bool\n\n`QTabBar`\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-selectionBehaviorOnRemove",
+            "description": {
+                "kind": "markdown",
+                "value": "selectionBehaviorOnRemove(self) -> QTabBar.SelectionBehavior\n\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-expanding",
+            "description": {
+                "kind": "markdown",
+                "value": "expanding(self) -> bool\n\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-autoHide",
+            "description": {
+                "kind": "markdown",
+                "value": "autoHide(self) -> bool\n\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-changeCurrentOnDrag",
+            "description": {
+                "kind": "markdown",
+                "value": "changeCurrentOnDrag(self) -> bool\n\n`QTabBar`"
+            }
+        },
+        {
+            "name": "qproperty-tabBarAutoHide",
+            "description": {
+                "kind": "markdown",
+                "value": "tabBarAutoHide(self) -> bool\n\n`QTabWidget`"
+            }
+        },
+        {
+            "name": "qproperty-showGrid",
+            "description": {
+                "kind": "markdown",
+                "value": "showGrid(self) -> bool\n\n`QTableView`\n`QTableWidget`"
+            }
+        },
+        {
+            "name": "qproperty-gridStyle",
+            "description": {
+                "kind": "markdown",
+                "value": "gridStyle(self) -> Qt.PenStyle\n\n`QTableView`\n`QTableWidget`"
+            }
+        },
+        {
+            "name": "qproperty-rowCount",
+            "description": {
+                "kind": "markdown",
+                "value": "rowCount(self) -> int\n\n`QTableWidget`"
+            }
+        },
+        {
+            "name": "qproperty-columnCount",
+            "description": {
+                "kind": "markdown",
+                "value": "columnCount(self) -> int\n\n`QMenu`\n`QTableWidget`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-source",
+            "description": {
+                "kind": "markdown",
+                "value": "source(self) -> QUrl\n\n`QTextBrowser`"
+            }
+        },
+        {
+            "name": "qproperty-searchPaths",
+            "description": {
+                "kind": "markdown",
+                "value": "searchPaths(self) -> List[str]\n\n`QTextBrowser`"
+            }
+        },
+        {
+            "name": "qproperty-openLinks",
+            "description": {
+                "kind": "markdown",
+                "value": "openLinks(self) -> bool\n\n`QTextBrowser`"
+            }
+        },
+        {
+            "name": "qproperty-autoFormatting",
+            "description": {
+                "kind": "markdown",
+                "value": "autoFormatting(self) -> QTextEdit.AutoFormatting\n\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-lineWrapColumnOrWidth",
+            "description": {
+                "kind": "markdown",
+                "value": "lineWrapColumnOrWidth(self) -> int\n\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-acceptRichText",
+            "description": {
+                "kind": "markdown",
+                "value": "acceptRichText(self) -> bool\n\n`QTextBrowser`\n`QTextEdit`"
+            }
+        },
+        {
+            "name": "qproperty-popupMode",
+            "description": {
+                "kind": "markdown",
+                "value": "popupMode(self) -> QToolButton.ToolButtonPopupMode\n\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-autoRaise",
+            "description": {
+                "kind": "markdown",
+                "value": "autoRaise(self) -> bool\n\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-arrowType",
+            "description": {
+                "kind": "markdown",
+                "value": "arrowType(self) -> Qt.ArrowType\n\n`QToolButton`"
+            }
+        },
+        {
+            "name": "qproperty-autoExpandDelay",
+            "description": {
+                "kind": "markdown",
+                "value": "autoExpandDelay(self) -> int\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-indentation",
+            "description": {
+                "kind": "markdown",
+                "value": "indentation(self) -> int\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-rootIsDecorated",
+            "description": {
+                "kind": "markdown",
+                "value": "rootIsDecorated(self) -> bool\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-uniformRowHeights",
+            "description": {
+                "kind": "markdown",
+                "value": "uniformRowHeights(self) -> bool\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-itemsExpandable",
+            "description": {
+                "kind": "markdown",
+                "value": "itemsExpandable(self) -> bool\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-allColumnsShowFocus",
+            "description": {
+                "kind": "markdown",
+                "value": "allColumnsShowFocus(self) -> bool\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-expandsOnDoubleClick",
+            "description": {
+                "kind": "markdown",
+                "value": "expandsOnDoubleClick(self) -> bool\n\n`QTreeView`\n`QTreeWidget`"
+            }
+        },
+        {
+            "name": "qproperty-emptyLabel",
+            "description": {
+                "kind": "markdown",
+                "value": "emptyLabel(self) -> str\n\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-cleanIcon",
+            "description": {
+                "kind": "markdown",
+                "value": "cleanIcon(self) -> QIcon\n\n`QUndoView`"
+            }
+        },
+        {
+            "name": "qproperty-windowModality",
+            "description": {
+                "kind": "markdown",
+                "value": "windowModality(self) -> Qt.WindowModality\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-geometry",
+            "description": {
+                "kind": "markdown",
+                "value": "geometry(self) -> QRect\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-sizePolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "sizePolicy(self) -> QSizePolicy\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-minimumSize",
+            "description": {
+                "kind": "markdown",
+                "value": "minimumSize(self) -> QSize\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-maximumSize",
+            "description": {
+                "kind": "markdown",
+                "value": "maximumSize(self) -> QSize\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-sizeIncrement",
+            "description": {
+                "kind": "markdown",
+                "value": "sizeIncrement(self) -> QSize\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-baseSize",
+            "description": {
+                "kind": "markdown",
+                "value": "baseSize(self) -> QSize\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-palette",
+            "description": {
+                "kind": "markdown",
+                "value": "palette(self) -> QPalette\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-font",
+            "description": {
+                "kind": "markdown",
+                "value": "font(self) -> QFont\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-cursor",
+            "description": {
+                "kind": "markdown",
+                "value": "cursor(self) -> QCursor\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-focusPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "focusPolicy(self) -> Qt.FocusPolicy\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-contextMenuPolicy",
+            "description": {
+                "kind": "markdown",
+                "value": "contextMenuPolicy(self) -> Qt.ContextMenuPolicy\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-acceptDrops",
+            "description": {
+                "kind": "markdown",
+                "value": "acceptDrops(self) -> bool\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-windowIcon",
+            "description": {
+                "kind": "markdown",
+                "value": "windowIcon(self) -> QIcon\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-windowIconText",
+            "description": {
+                "kind": "markdown",
+                "value": "windowIconText(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-windowOpacity",
+            "description": {
+                "kind": "markdown",
+                "value": "windowOpacity(self) -> float\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-toolTip",
+            "description": {
+                "kind": "markdown",
+                "value": "toolTip(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-toolTipDuration",
+            "description": {
+                "kind": "markdown",
+                "value": "toolTipDuration(self) -> int\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-statusTip",
+            "description": {
+                "kind": "markdown",
+                "value": "statusTip(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-whatsThis",
+            "description": {
+                "kind": "markdown",
+                "value": "whatsThis(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-accessibleName",
+            "description": {
+                "kind": "markdown",
+                "value": "accessibleName(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-accessibleDescription",
+            "description": {
+                "kind": "markdown",
+                "value": "accessibleDescription(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-layoutDirection",
+            "description": {
+                "kind": "markdown",
+                "value": "layoutDirection(self) -> Qt.LayoutDirection\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-autoFillBackground",
+            "description": {
+                "kind": "markdown",
+                "value": "autoFillBackground(self) -> bool\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-styleSheet",
+            "description": {
+                "kind": "markdown",
+                "value": "styleSheet(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-locale",
+            "description": {
+                "kind": "markdown",
+                "value": "locale(self) -> QLocale\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-windowFilePath",
+            "description": {
+                "kind": "markdown",
+                "value": "windowFilePath(self) -> str\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-inputMethodHints",
+            "description": {
+                "kind": "markdown",
+                "value": "inputMethodHints(self) -> Qt.InputMethodHints\n\n`QAbstractScrollArea`\n`QAbstractSlider`\n`QAbstractSpinBox`\n`QCalendarWidget`\n`QCheckBox`\n`QColorDialog`\n`QColumnView`\n`QComboBox`\n`QCommandLinkButton`\n`QDateEdit`\n`QDateTimeEdit`\n`QDial`\n`QDialog`\n`QDialogButtonBox`\n`QDockWidget`\n`QDoubleSpinBox`\n`QErrorMessage`\n`QFileDialog`\n`QFocusFrame`\n`QFontComboBox`\n`QFontDialog`\n`QFrame`\n`QGraphicsView`\n`QGroupBox`\n`QHeaderView`\n`QInputDialog`\n`QKeySequenceEdit`\n`QLCDNumber`\n`QLabel`\n`QLineEdit`\n`QListView`\n`QListWidget`\n`QMainWindow`\n`QMdiArea`\n`QMdiSubWindow`\n`QMenu`\n`QMenuBar`\n`QMessageBox`\n`QOpenGLWidget`\n`QPlainTextEdit`\n`QProgressBar`\n`QProgressDialog`\n`QPushButton`\n`QRadioButton`\n`QRubberBand`\n`QScrollArea`\n`QScrollBar`\n`QSlider`\n`QSpinBox`\n`QSplashScreen`\n`QSplitter`\n`QStackedWidget`\n`QStatusBar`\n`QTabBar`\n`QTabWidget`\n`QTableView`\n`QTableWidget`\n`QTextBrowser`\n`QTextEdit`\n`QTimeEdit`\n`QToolBar`\n`QToolBox`\n`QToolButton`\n`QTreeView`\n`QTreeWidget`\n`QUndoView`\n`QWidget`\n`QWizard`\n`QWizardPage`"
+            }
+        },
+        {
+            "name": "qproperty-wizardStyle",
+            "description": {
+                "kind": "markdown",
+                "value": "wizardStyle(self) -> QWizard.WizardStyle\n\n`QWizard`"
+            }
+        },
+        {
+            "name": "qproperty-titleFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "titleFormat(self) -> Qt.TextFormat\n\n`QWizard`"
+            }
+        },
+        {
+            "name": "qproperty-subTitleFormat",
+            "description": {
+                "kind": "markdown",
+                "value": "subTitleFormat(self) -> Qt.TextFormat\n\n`QWizard`"
+            }
+        },
+        {
+            "name": "qproperty-startId",
+            "description": {
+                "kind": "markdown",
+                "value": "startId(self) -> int\n\n`QWizard`"
+            }
+        },
+        {
+            "name": "qproperty-subTitle",
+            "description": {
+                "kind": "markdown",
+                "value": "subTitle(self) -> str\n\n`QWizardPage`"
+            }
         }
     ],
     "pseudoClasses": [
