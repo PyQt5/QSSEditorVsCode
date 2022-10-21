@@ -2,7 +2,7 @@
 	"name": "qsseditor",
 	"displayName": "QSSEditor",
 	"description": "Qt StyleSheet Editor",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "Irony",
 	"author": {
 		"name": "Irony",

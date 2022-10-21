@@ -118,6 +118,12 @@ def generate_pseudoClasses(doc):
         pseudo['name'] = tds[0].text()
         pseudo['description'] = generate_desc(tds[1].html())
         pseudoClasses.append(pseudo)
+        # 为状态增加!
+        pseudo = OrderedDict()
+        pseudo['name'] = tds[0].text()
+        pseudo['name'] = pseudo['name'][0:1] + '!' + pseudo['name'][1:]
+        pseudo['description'] = generate_desc(tds[1].html())
+        pseudoClasses.append(pseudo)
     return pseudoClasses
 
 
@@ -160,15 +166,22 @@ def generate_qprops():
 
     app = QtWidgets.QApplication(sys.argv)
     pset = set()
+    # ignores = {}
+    widgets = {}
 
     for name in names:
         try:
-            if name == 'QHeaderView':
-                w = getattr(QtWidgets, name)(Qt.Horizontal)
-            elif name == 'QRubberBand':
-                w = getattr(QtWidgets, name)(QtWidgets.QRubberBand.Rectangle)
+            if name in widgets:
+                w = widgets[name]
             else:
-                w = getattr(QtWidgets, name)()
+                if name == 'QHeaderView':
+                    w = getattr(QtWidgets, name)(Qt.Horizontal)
+                elif name == 'QRubberBand':
+                    w = getattr(QtWidgets,
+                                name)(QtWidgets.QRubberBand.Rectangle)
+                else:
+                    w = getattr(QtWidgets, name)()
+                widgets[name] = w
             # print(w)
             metaObject = w.metaObject()
             for i in range(metaObject.propertyOffset(),
@@ -177,6 +190,10 @@ def generate_qprops():
 
                 if not hasattr(w, p.name()) or p.name(
                 ) in pset or not p.isWritable() or not p.isDesignable():
+                    print('ignore {} property: {}'.format(name, p.name()))
+                    # if p.name() not in ignores:
+                    #     ignores[p.name()] = []
+                    # ignores[p.name()].append(name)
                     continue
 
                 field = getattr(w, p.name())
@@ -186,32 +203,55 @@ def generate_qprops():
 
                 desc = OrderedDict()
                 desc['kind'] = 'markdown'
-                desc['value'] = field.__doc__
+                desc['value'] = field.__doc__.strip()
 
                 prop['description'] = desc
                 properties.append(prop)
         except Exception as e:
             print(e)
 
+    # print('pset:', pset)
+    # print()
+    # print('ignores:', ignores)
+
     for prop in properties:
         pname = prop['name'].replace('qproperty-', '')
         clazzs = []
         for name in names:
             try:
-                if name == 'QHeaderView':
-                    w = getattr(QtWidgets, name)(Qt.Horizontal)
-                elif name == 'QRubberBand':
-                    w = getattr(QtWidgets,
-                                name)(QtWidgets.QRubberBand.Rectangle)
-                else:
-                    w = getattr(QtWidgets, name)()
+                w = widgets[name]
+                # if hasattr(w, pname) and name not in ignores.get(pname, []):
                 if hasattr(w, pname):
-                    clazzs.append('`%s`' % name)
+                    clazzs.append(name)
             except Exception as e:
                 print(e)
         if clazzs:
-            prop['description']['value'] = prop['description'][
-                'value'] + '\n\n' + '\n'.join(clazzs)
+            cclazzs = clazzs.copy()
+            for c in cclazzs:
+                if c not in widgets:
+                    continue
+                try:
+                    widgets[c].__class__.__dict__[pname]
+                except KeyError:
+                    clazzs.remove(c)
+
+            # 非直接的控件
+            cclazzs = list(set(cclazzs) ^ set(clazzs))
+
+            # 直接的控件属性引用
+            references = []
+            for c in clazzs:
+                d = OrderedDict()
+                d['name'] = c
+                d['url'] = 'https://doc.qt.io/qt-5/{}.html#{}-prop'.format(
+                    c.lower(), pname)
+                references.append(d)
+            if references:
+                prop['references'] = references
+
+            # 非直接的控件属性引用
+            if cclazzs:
+                prop['syntax'] = '\n| '.join(cclazzs)
     return properties
 
 
