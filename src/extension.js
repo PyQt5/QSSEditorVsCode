@@ -1,6 +1,8 @@
 const vscode = require('vscode');
 const client = require('./client.js');
 
+var g_statusBar = null;
+
 /**
  * 定义跳转
  * @param {vscode.TextDocument} document 
@@ -49,6 +51,13 @@ function activate(context) {
 	vscode.workspace.onDidChangeTextDocument(client.onDidChangeTextDocument);
 	vscode.workspace.onDidSaveTextDocument(client.onDidSaveTextDocument);
 
+	// 注册状态栏
+	if (!g_statusBar) {
+		g_statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 0);
+	}
+	updateStatusBar(false);
+	client.setStatusBarCallback(updateStatusBar);
+
 	// 注册关键词
 	require('./provider.js')(context);
 
@@ -56,6 +65,14 @@ function activate(context) {
 
 	// 连接服务器
 	client.startClient();
+}
+
+function updateStatusBar(enabled) {
+	if (g_statusBar) {
+		g_statusBar.text = enabled ? `$(qss-status-on)` : `$(qss-status-off)`;
+		g_statusBar.tooltip = enabled ? vscode.l10n.t("Connected") : vscode.l10n.t("Disconnected");
+		g_statusBar.show();
+	}
 }
 
 /**

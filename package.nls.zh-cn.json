@@ -1,4 +1,7 @@
 {
-    "qsseditor.applyStyle.title": "应用样式",
-    "qsseditor.setPort.title": "设置连接DesignerProxy的端口"
+    "qsseditor.applyStyle.text": "应用样式",
+    "qsseditor.setPort.text": "设置连接DesignerProxy的端口",
+    "qsseditor.autoApply.text": "自动应用样式",
+    "qsseditor.serverHost.text": "Designer 代理地址",
+    "qsseditor.serverPort.text": "Designer 代理端口"
 }

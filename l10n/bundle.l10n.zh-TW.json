@@ -1,0 +1,7 @@
+{
+    "Connected": "已連接",
+    "Disconnected": "未連接",
+    "Please input the port number": "请输入端口号",
+    "Enter the connect port": "输入连接端口",
+    "the value must be a number (0 < port < 65535)": "端口必须在0到65535之间"
+}

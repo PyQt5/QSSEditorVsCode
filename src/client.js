@@ -3,17 +3,13 @@ const RpcWebSocket = require('rpc-websockets').Client;
 const keywords = require('./keywords.js');
 
 var g_client;
+var g_updateStatusBar;
 var g_timerConnect; // 重连定时器
 var g_timerApply; // 延迟应用样式
 var g_autoApply = true; // 是否启用自动应用样式
 var g_valid = true;
 var g_host = "localhost";
 var g_port = 61052;
-var g_zh = false;
-
-// 判断当前语言是否中文
-const vsconfig = process.env['VSCODE_NLS_CONFIG'];
-if (vsconfig) g_zh = JSON.parse(vsconfig).locale.startsWith('zh');
 
 /**
  * 初始化关键词
@@ -48,14 +44,17 @@ function startClient() {
     });
     g_client.on('open', function () {
         console.log('NodeClient::handleConnected');
+        if (g_updateStatusBar) g_updateStatusBar(true);
     });
     g_client.on('close', function () {
         console.log('NodeClient::handleDisconnected');
         if (g_valid && g_timerConnect == undefined) g_timerConnect = setTimeout(startClient, 3000);
+        if (g_updateStatusBar) g_updateStatusBar(false);
     });
     g_client.on('error', function (event) {
         console.error('NodeClient::handleError: ' + event.error);
         if (g_valid && g_timerConnect == undefined) g_timerConnect = setTimeout(startClient, 3000);
+        if (g_updateStatusBar) g_updateStatusBar(false);
     });
     g_client.on('addKeywords', function (words) {
         console.log('NodeClient::handleKeywordAdd: name=' + words);
@@ -118,14 +117,14 @@ function applyStyle(doc) {
 function setPort() {
     vscode.window.showInputBox({
         ignoreFocusOut: false,
-        placeHolder: g_zh ? '请输入端口号' : 'Please input the port number',
-        title: g_zh ? '输入连接端口' : 'Enter the connect port',
+        placeHolder: vscode.l10n.t('Please input the port number'),
+        title: vscode.l10n.t('Enter the connect port'),
         value: '' + vscode.workspace.getConfiguration().get('qsseditor.serverPort', '61052'),
         validateInput: function (value) {
             let port = Number(value);
             if (!isNaN(port) && port != 0)
                 return null;
-            return g_zh ? '端口必须在0到65535之间' : 'the value must be a number (0 < port < 65535)';
+            return vscode.l10n.t('the value must be a number (0 < port < 65535)');
         }
     }).then(port => {
         if (port == undefined) return;
@@ -176,6 +175,14 @@ function onDidSaveTextDocument(document) {
     onAutoApply(document);
 };
 
+/**
+ * 设置状态栏回调
+ * @param {function} callback 
+ */
+function setStatusBarCallback(callback) {
+    g_updateStatusBar = callback;
+}
+
 module.exports = {
     initKeywords,
     startClient,
@@ -185,4 +192,5 @@ module.exports = {
     setPort,
     onDidChangeTextDocument,
     onDidSaveTextDocument,
+    setStatusBarCallback,
 }
