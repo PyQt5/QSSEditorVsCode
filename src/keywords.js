@@ -18,7 +18,7 @@ function register(context) {
 };
 
 function add(name) {
-    if (name == undefined || name.trim() == "" || g_words.has(name.trim())) return;
+    if (name == undefined || name.trim() == '' || g_words.has(name.trim())) return;
     g_words.add(name.trim());
     g_items.push(new vscode.CompletionItem(name.trim(), vscode.CompletionItemKind.Keyword));
 };

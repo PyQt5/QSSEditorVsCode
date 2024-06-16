@@ -2,6 +2,10 @@ const vscode = require('vscode');
 const client = require('./client.js');
 
 var g_statusBar = null;
+var g_editor = null;
+var g_output = vscode.window.createOutputChannel('QSS Editor');
+
+client.setOutputChannel(g_output);
 
 /**
  * 定义跳转
@@ -21,8 +25,9 @@ function provideDefinition(document, position, token) {
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	console.log('extension "qsseditor" is now active!');
-	console.log(process.env);
+	g_output.show();
+	g_output.clear();
+	g_output.appendLine('extension "qsseditor" is now active!');
 
 	// 注册命令应用样式命令
 	context.subscriptions.push(vscode.commands.registerCommand('qsseditor.applyStyle', function () {
@@ -48,8 +53,20 @@ function activate(context) {
 	}));
 
 	// 注册事件
-	vscode.workspace.onDidChangeTextDocument(client.onDidChangeTextDocument);
+	vscode.window.onDidChangeActiveTextEditor(editor => {
+		g_editor = editor;
+	});
+	vscode.workspace.onDidChangeTextDocument(event => {
+		if (g_editor && event.document === g_editor.document) {
+			if (event.document.languageId.toLowerCase() !== 'css' || !event.document.isDirty) {
+				return;
+			}
+			client.onDidChangeTextDocument(event);
+		}
+	});
 	vscode.workspace.onDidSaveTextDocument(client.onDidSaveTextDocument);
+
+	client.setValid(true);
 
 	// 注册状态栏
 	if (!g_statusBar) {
@@ -70,7 +87,7 @@ function activate(context) {
 function updateStatusBar(enabled) {
 	if (g_statusBar) {
 		g_statusBar.text = enabled ? `$(qss-status-on)` : `$(qss-status-off)`;
-		g_statusBar.tooltip = enabled ? vscode.l10n.t("Connected") : vscode.l10n.t("Disconnected");
+		g_statusBar.tooltip = enabled ? vscode.l10n.t('Connected') : vscode.l10n.t('Disconnected');
 		g_statusBar.show();
 	}
 }
@@ -79,7 +96,8 @@ function updateStatusBar(enabled) {
  * 插件被释放时触发
  */
 function deactivate() {
-	console.log('extension "qsseditor" is now deactivated!');
+	g_output.appendLine('extension "qsseditor" is now deactivated!');
+	client.setValid(false);
 	client.stopClient();
 }
 
