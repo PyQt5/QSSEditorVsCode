@@ -39,6 +39,11 @@ function activate(context) {
 		client.setPort();
 	}));
 
+	// 注册获取截图命令
+	context.subscriptions.push(vscode.commands.registerCommand('qsseditor.captureWidget', function () {
+		client.captureWidget();
+	}));
+
 	// 注册跳转定义
 	context.subscriptions.push(vscode.languages.registerDefinitionProvider([{
 		scheme: 'file',

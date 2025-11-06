@@ -1,6 +1,7 @@
 {
     "qsseditor.applyStyle.text": "Apply Style",
     "qsseditor.setPort.text": "Set Connect DesignerProxy Port",
+    "qsseditor.captureWidget.text": "Show QtDesigner Preview",
     "qsseditor.autoApply.text": "Auto apply style sheet",
     "qsseditor.serverHost.text": "DesignerProxy Host",
     "qsseditor.serverPort.text": "DesignerProxy Port"

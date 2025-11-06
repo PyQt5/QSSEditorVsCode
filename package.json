@@ -30,7 +30,8 @@
 	"activationEvents": [
 		"onLanguage:css",
 		"onCommand:qsseditor.applyStyle",
-		"onCommand:qsseditor.setPort"
+		"onCommand:qsseditor.setPort",
+		"onCommand:qsseditor.captureWidget"
 	],
 	"main": "src/extension.js",
 	"l10n": "./l10n",
@@ -67,6 +68,15 @@
 			{
 				"command": "qsseditor.setPort",
 				"title": "%qsseditor.setPort.text%"
+			},
+			{
+				"command": "qsseditor.captureWidget",
+				"title": "%qsseditor.captureWidget.text%",
+				"category": "menubar",
+				"icon": {
+					"light": "./images/light_preview.svg",
+					"dark": "./images/dark_preview.svg"
+				}
 			}
 		],
 		"keybindings": [
@@ -81,6 +91,13 @@
 				{
 					"when": "editorTextFocus && editorLangId =~ /^css$|^qss$/",
 					"command": "qsseditor.applyStyle",
+					"group": "navigation"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "qsseditor.captureWidget",
+					"when": "resourceExtname =~ /.css$|.qss$/ || editorLangId =~ /^css$|^qss$/",
 					"group": "navigation"
 				}
 			]
@@ -121,6 +138,20 @@
 				"default": {
 					"fontPath": "data/qsseditor.woff",
 					"fontCharacter": "\\ea3f"
+				}
+			},
+			"qss-preview-on": {
+				"description": "QtDesigner Previewed",
+				"default": {
+					"fontPath": "data/qsseditor.woff",
+					"fontCharacter": "\\e69f"
+				}
+			},
+			"qss-preview-off": {
+				"description": "QtDesigner UnPreviewed",
+				"default": {
+					"fontPath": "data/qsseditor.woff",
+					"fontCharacter": "\\e6b1"
 				}
 			}
 		}

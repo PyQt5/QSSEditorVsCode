@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 const RpcWebSocket = require('rpc-websockets').Client;
 const keywords = require('./keywords.js');
+const preview = require('./preview.js');
 
 var g_client;
 var g_updateStatusBar;
@@ -210,6 +211,18 @@ function setPort() {
     });
 };
 
+/**
+ * 获取截图
+ */
+function captureWidget() {
+    if (!g_valid || g_client == undefined) return;
+    preview.show();
+    const imgExt = vscode.extensions.getExtension('vscode.media-preview');
+    console.log(imgExt);
+    console.log(imgExt.extensionPath);
+    g_client.notify('captureWidget', false);
+}
+
 
 /**
  * 执行延迟自动应用样式
@@ -260,6 +273,7 @@ module.exports = {
     selectWidget,
     applyStyle,
     setPort,
+    captureWidget,
     onDidChangeTextDocument,
     onDidSaveTextDocument,
     setStatusBarCallback,

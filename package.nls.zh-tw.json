@@ -1,6 +1,7 @@
 {
     "qsseditor.applyStyle.text": "應用樣式",
     "qsseditor.setPort.text": "設定連接DesignerProxy的端口",
+    "qsseditor.captureWidget.text": "顯示 QtDesigner 截圖",
     "qsseditor.autoApply.text": "自動應用樣式",
     "qsseditor.serverHost.text": "Designer 代理地址",
     "qsseditor.serverPort.text": "Designer 代理端口"
