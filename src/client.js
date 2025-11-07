@@ -72,6 +72,11 @@ function startClient() {
         g_output.appendLine('NodeClient::handleKeywordAdd: name=' + words);
         words.forEach(keywords.add);
     });
+    g_client.on('showImage', function (params) {
+        if (params.length < 2) return;
+        g_output.appendLine('NodeClient::handleShowImage: id=' + params[0]);
+        showImages(params[0], params[1]);
+    });
 };
 
 
@@ -216,11 +221,14 @@ function setPort() {
  */
 function captureWidget() {
     if (!g_valid || g_client == undefined) return;
-    preview.show();
-    const imgExt = vscode.extensions.getExtension('vscode.media-preview');
-    console.log(imgExt);
-    console.log(imgExt.extensionPath);
-    g_client.notify('captureWidget', false);
+    g_client.notify('captureWidget', 'all');
+}
+
+/**
+ * 显示截图
+ */
+function showImages(id, image) {
+    preview.show(id, image);
 }
 
 
