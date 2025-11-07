@@ -2,7 +2,7 @@
 	"name": "qsseditor",
 	"displayName": "QSSEditor",
 	"description": "Qt StyleSheet Editor",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "Irony",
 	"author": {
 		"name": "Irony",
@@ -30,8 +30,7 @@
 	"activationEvents": [
 		"onLanguage:css",
 		"onCommand:qsseditor.applyStyle",
-		"onCommand:qsseditor.setPort",
-		"onCommand:qsseditor.captureWidget"
+		"onCommand:qsseditor.setPort"
 	],
 	"main": "src/extension.js",
 	"l10n": "./l10n",
@@ -68,15 +67,6 @@
 			{
 				"command": "qsseditor.setPort",
 				"title": "%qsseditor.setPort.text%"
-			},
-			{
-				"command": "qsseditor.captureWidget",
-				"title": "%qsseditor.captureWidget.text%",
-				"category": "menubar",
-				"icon": {
-					"light": "./images/light_preview.svg",
-					"dark": "./images/dark_preview.svg"
-				}
 			}
 		],
 		"keybindings": [
@@ -91,13 +81,6 @@
 				{
 					"when": "editorTextFocus && editorLangId =~ /^css$|^qss$/",
 					"command": "qsseditor.applyStyle",
-					"group": "navigation"
-				}
-			],
-			"editor/title": [
-				{
-					"command": "qsseditor.captureWidget",
-					"when": "resourceExtname =~ /.css$|.qss$/ || editorLangId =~ /^css$|^qss$/",
 					"group": "navigation"
 				}
 			]

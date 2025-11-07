@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 
 var g_panel = {};
+var g_fnCapture;
 
 function getWebviewContent(id) {
     return `<!DOCTYPE html>
@@ -29,7 +30,9 @@ function getWebviewContent(id) {
 function createWebviewPanel(id) {
     var panel = g_panel[id];
     if (panel) {
-        panel.reveal();
+        if (!panel.visible) {
+            panel.reveal(undefined, true);
+        }
         return;
     }
 
@@ -46,8 +49,16 @@ function createWebviewPanel(id) {
     );
     g_panel[id] = panel;
 
+    // 定时请求截图
+    const interval = setInterval(() => {
+        if (panel.visible && g_fnCapture != undefined) {
+            g_fnCapture(id);
+        }
+    }, 2000);
+
+    // 关闭时触发
     panel.onDidDispose(() => {
-        console.log(`dispose preview panel ${id}`);
+        clearInterval(interval);
         if (g_panel[id]) {
             delete g_panel[id];
         }
@@ -60,7 +71,6 @@ function show(id, image) {
     createWebviewPanel(id);
     var panel = g_panel[id];
     if (panel) {
-        panel.reveal();
         panel.webview.postMessage({
             command: 'update',
             image: image,
@@ -72,7 +82,12 @@ function count() {
     return Object.keys(g_panel).length;
 }
 
+function setCaptureFunc(request) {
+    g_fnCapture = request;
+}
+
 module.exports = {
     show,
     count,
+    setCaptureFunc,
 }

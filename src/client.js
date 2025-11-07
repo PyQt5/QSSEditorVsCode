@@ -74,7 +74,7 @@ function startClient() {
     });
     g_client.on('showImage', function (params) {
         if (params.length < 2) return;
-        g_output.appendLine('NodeClient::handleShowImage: id=' + params[0]);
+        // g_output.appendLine('NodeClient::handleShowImage: id=' + params[0]);
         showImages(params[0], params[1]);
     });
 };
@@ -219,9 +219,9 @@ function setPort() {
 /**
  * 获取截图
  */
-function captureWidget() {
+function captureWidget(id) {
     if (!g_valid || g_client == undefined) return;
-    g_client.notify('captureWidget', 'all');
+    g_client.notify('captureWidget', id == undefined ? 'all' : id);
 }
 
 /**
@@ -271,6 +271,8 @@ function onDidSaveTextDocument(document) {
 function setStatusBarCallback(callback) {
     g_updateStatusBar = callback;
 };
+
+preview.setCaptureFunc(captureWidget);
 
 module.exports = {
     initKeywords,

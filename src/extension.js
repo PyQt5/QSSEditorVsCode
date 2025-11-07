@@ -39,10 +39,10 @@ function activate(context) {
 		client.setPort();
 	}));
 
-	// 注册获取截图命令
-	context.subscriptions.push(vscode.commands.registerCommand('qsseditor.captureWidget', function () {
-		client.captureWidget();
-	}));
+	// // 注册获取截图命令
+	// context.subscriptions.push(vscode.commands.registerCommand('qsseditor.captureWidget', function () {
+	// 	client.captureWidget();
+	// }));
 
 	// 注册跳转定义
 	context.subscriptions.push(vscode.languages.registerDefinitionProvider([{
@@ -69,7 +69,14 @@ function activate(context) {
 			client.onDidChangeTextDocument(event);
 		}
 	});
-	vscode.workspace.onDidSaveTextDocument(client.onDidSaveTextDocument);
+	vscode.workspace.onDidSaveTextDocument(document => {
+		if (g_editor && document === g_editor.document) {
+			if (document.languageId.toLowerCase() !== 'css') {
+				return;
+			}
+			client.onDidSaveTextDocument(document);
+		}
+	});
 
 	client.setValid(true);
 
